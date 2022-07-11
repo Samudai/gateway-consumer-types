@@ -28,27 +28,20 @@
     "dist"
   ],
   "keywords": [
-    "example",
-    "typescript",
-    "npm",
-    "package",
-    "sample",
-    "boilerplate",
-    "starter",
-    "demo",
-    "cjs",
-    "esm",
-    "umd"
+    "samudai",
+    "gateway",
+    "consumer",
+    "type"
   ],
   "author": "Samudai <https://samudai.xyz>",
   "license": "MIT",
-  "homepage": "https://github.com/Samudai/-types-gateway-consumer",
+  "homepage": "https://github.com/Samudai/gateway-consumer-types",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Samudai/-types-gateway-consumer.git"
+    "url": "git@github.com:Samudai/gateway-consumer-types.git"
   },
   "bugs": {
-    "url": "https://github.com/Samudai/-types-gateway-consumer/issues"
+    "url": "https://github.com/Samudai/gateway-consumer-types/issues"
   },
   "dependencies": {},
   "devDependencies": {
