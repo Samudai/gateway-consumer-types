@@ -5,7 +5,7 @@ interface Metadata {
 }
 
 export type Project = {
-  project_id: string
+  project_id?: string
   link_id: string
   type: ProjectType
   title: string
@@ -39,7 +39,7 @@ export type ProjectFile = {
 }
 
 export type Task = {
-  task_id: string
+  task_id?: string
   project_id: string
   title: string
   description: string
@@ -75,7 +75,7 @@ export type TaskFile = {
 }
 
 export type SubTask = {
-  subtask_id: string
+  subtask_id?: string
   task_id: string
   title: string
   completed: boolean
