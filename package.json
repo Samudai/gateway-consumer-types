@@ -1,7 +1,7 @@
 {
-  "name": "gateway-consumer-types",
-  "version": "0.0.3",
-  "description": "",
+  "name": "@samudai_xyz/gateway-consumer-types",
+  "version": "0.0.4",
+  "description": "## Usage",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
@@ -38,12 +38,11 @@
   "homepage": "https://github.com/Samudai/gateway-consumer-types",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Samudai/gateway-consumer-types.git"
+    "url": "git+ssh://git@github.com/Samudai/gateway-consumer-types.git"
   },
   "bugs": {
     "url": "https://github.com/Samudai/gateway-consumer-types/issues"
   },
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
@@ -62,5 +61,8 @@
     "typescript": "^4.4.3",
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
