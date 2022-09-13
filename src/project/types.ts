@@ -109,3 +109,32 @@ export type DAODetail = {
   dao_id: string
   roles: string[]
 }
+
+export type ProjectResponse = {
+  project_id: string
+  link_id: string
+  type: ProjectType
+  title: string
+  description: string
+  visibility: Visibility
+  start_date?: string
+  end_date?: string
+  created_by: string
+  updated_by?: string
+  default: boolean
+  department: string
+
+  github_repos?: string[]
+  poc_member?: {
+    member_id: string
+    name: string
+  }
+  discord_channel?: string
+  captain?: {
+    member_id: string
+    name: string
+  }
+
+  created_at?: string
+  updated_at?: string
+}
