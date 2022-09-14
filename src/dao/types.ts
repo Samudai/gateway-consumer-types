@@ -11,7 +11,7 @@ export type DAO = {
   about: string
   profile_picture: string
   contract_address: string
-  wallet_address: string
+  snapshot: string
   owner_id: string
 
   created_at?: string

@@ -4,8 +4,17 @@ interface Metadata {
   [key: string]: string
 }
 
+export interface IMember {
+  member_id: string
+  username: string
+}
+
+export interface IExtras {
+  [key: string]: any
+}
+
 export type Project = {
-  project_id?: string
+  project_id: string
   link_id: string
   type: ProjectType
   title: string
@@ -23,6 +32,11 @@ export type Project = {
   discord_channel?: string
   captain?: string
 
+  poc_member?: IMember
+  captain_member?: IMember
+
+  extras?: IExtras
+
   created_at?: string
   updated_at?: string
 }
@@ -39,7 +53,7 @@ export type ProjectFile = {
 }
 
 export type Task = {
-  task_id?: string
+  task_id: string
   project_id: string
   title: string
   description: string
@@ -75,7 +89,7 @@ export type TaskFile = {
 }
 
 export type SubTask = {
-  subtask_id?: string
+  subtask_id: string
   task_id: string
   title: string
   completed: boolean
@@ -108,33 +122,4 @@ export type TaskAssign = {
 export type DAODetail = {
   dao_id: string
   roles: string[]
-}
-
-export type ProjectResponse = {
-  project_id: string
-  link_id: string
-  type: ProjectType
-  title: string
-  description: string
-  visibility: Visibility
-  start_date?: string
-  end_date?: string
-  created_by: string
-  updated_by?: string
-  default: boolean
-  department: string
-
-  github_repos?: string[]
-  poc_member?: {
-    member_id: string
-    name: string
-  }
-  discord_channel?: string
-  captain?: {
-    member_id: string
-    name: string
-  }
-
-  created_at?: string
-  updated_at?: string
 }
