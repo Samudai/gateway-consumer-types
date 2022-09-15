@@ -28,7 +28,8 @@ export type Payment = {
 
 export type Provider = {
   id?: string
-  dao_id?: string
+  dao_id: string
+  name: string
   provider_type: ProviderType
   address: string
   chain_id: number
