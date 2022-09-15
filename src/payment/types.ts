@@ -16,6 +16,7 @@ export type Payment = {
   completed_at?: string
   created_by: string
   status: PaymentStatus
+  chain_id: number
   approver?: IMember
 
   created_at?: string
