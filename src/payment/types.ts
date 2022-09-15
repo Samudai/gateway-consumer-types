@@ -1,9 +1,5 @@
 import { PaymentStatus, ProviderType } from './enums'
-
-export interface IMember {
-  member_id: string
-  username: string
-}
+import { IMember } from './interfaces'
 
 export type Payment = {
   id?: string
