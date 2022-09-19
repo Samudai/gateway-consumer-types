@@ -42,7 +42,7 @@ export type MemberResponse = {
 
 //Discord
 export type Discord = {
-  id: string
+  discord_user_id: string
   username: string
   avatar: string
   discriminator: string
