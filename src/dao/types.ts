@@ -8,11 +8,12 @@ export type DAO = {
   dao_id: string
   name: string
   guild_id: string
-  about: string
-  profile_picture: string
-  contract_address: string
-  snapshot: string
-  owner_id: string
+  about?: string
+  profile_picture?: string
+  contract_address?: string
+  snapshot?: string
+  owner_id?: string
+  onboarding: boolean
 
   created_at?: string
   updated_at?: string
@@ -51,11 +52,12 @@ export type DAOView = {
   dao_id: string
   guild_id: string
   name: string
-  about: string
-  profile_picture: string
-  contract_address: string
-  wallet_address: string
-  owner_id: string
+  onboarding: boolean
+  about?: string
+  profile_picture?: string
+  contract_address?: string
+  wallet_address?: string
+  owner_id?: string
 
   members: string[]
   roles: string[]
@@ -82,12 +84,12 @@ export type MemberDAOView = {
   member_id: string
   dao_id: string
   name: string
-  about: string
-  profile_picture: string
-  contract_address: string
-  wallet_address: string
-  owner_id: string
   guild_id: string
+  onboarding: boolean
+
+  about?: string
+  profile_picture?: string
+  owner_id?: string
 
   roles: DAORole[]
   access: string

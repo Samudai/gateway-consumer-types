@@ -1,5 +1,9 @@
 import { InviteStatus } from './enums'
 
+export interface MemberSocial {
+  [key: string]: string
+}
+
 //Member
 export type Member = {
   member_id: string
@@ -32,6 +36,7 @@ export type MemberResponse = {
   about?: string
   skills: string[]
   profile_picture?: string
+  socials?: MemberSocial[]
 
   discord: Discord
   wallets: WalletView[]
