@@ -1,4 +1,4 @@
-import { InviteStatus } from './enums'
+import { ClanRole, InviteStatus } from './enums'
 
 export interface MemberSocial {
   [key: string]: string
@@ -146,7 +146,9 @@ export type Clan = {
 export type ClanMember = {
   clan_id: string
   member_id: string
-  role: string
+  role: ClanRole
+  username: string
+  profile_picture: string
   notification: boolean
 
   created_at?: string
@@ -172,6 +174,49 @@ export type ClanInvite = {
   invite_code: string
   status: InviteStatus
   receiver_id: string
+
+  created_at?: string
+  updated_at?: string
+}
+
+export type ClanMemberInfo = {
+  member_id: string
+  username: string
+  profile_picture: string
+}
+
+export type ClanProjectInfo = {
+  project_id: string
+  title: string
+  progress?: number
+}
+
+export type ClanBountyInfo = {
+  value: number
+  data: number[]
+}
+
+export type ClanResponse = {
+  clan_id: string
+  name: string
+  visbility: string
+  avatar: string
+  created_by: string
+
+  members: ClanMemberInfo[]
+  admin: ClanMemberInfo
+
+  projects?: {
+    active: ClanProjectInfo[]
+    completed: ClanProjectInfo[]
+  }
+
+  earned_badges?: string[]
+  skills?: string[]
+  reviews?: string[]
+  applications?: string[]
+  total_bounty?: ClanBountyInfo
+  chat_id?: string
 
   created_at?: string
   updated_at?: string

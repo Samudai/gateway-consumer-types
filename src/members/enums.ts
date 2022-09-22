@@ -4,3 +4,8 @@ export enum InviteStatus {
   ACCEPTED = 'accepted',
   DECLINED = 'declined',
 }
+
+export enum ClanRole {
+  OWNER = 'owner',
+  MEMBER = 'member',
+}

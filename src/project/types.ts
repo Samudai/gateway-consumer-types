@@ -1,4 +1,4 @@
-import { CommentType, ProjectType, TaskStatus, Visibility } from './enums'
+import { CommentType, ProjectType, Visibility } from './enums'
 
 interface Metadata {
   [key: string]: string
@@ -7,6 +7,7 @@ interface Metadata {
 export interface IMember {
   member_id: string
   username: string
+  profile_picture?: string
 }
 
 export interface IExtras {
@@ -26,16 +27,15 @@ export type Project = {
   updated_by?: string
   default: boolean
   department: string
+  columns?: ProjectColumn[]
 
   github_repos?: string[]
   poc_member_id?: string
   discord_channel?: string
   captain?: string
-
-  poc_member?: IMember
-  captain_member?: IMember
-
-  extras?: IExtras
+  budget_amount?: number
+  budget_currency?: string
+  completed: boolean
 
   created_at?: string
   updated_at?: string
@@ -57,21 +57,26 @@ export type Task = {
   project_id: string
   title: string
   description: string
-  status: TaskStatus
+  col: number
   created_by: string
-  position: number
 
   updated_by?: string
+
   poc_member_id?: string
   github_issue?: string
+  notion_page?: string
   tags?: string[]
   deadline?: string
   assignee_member?: string[]
   assignee_clan?: string[]
   feedback?: string
+  position: number
+  payout_amount?: number
+  payout_currency?: string
 
-  notion_page?: string
-  notion_property?: string
+  files?: TaskFile[]
+  subtasks?: SubTask[]
+  comments?: Comment[]
 
   created_at?: string
   updated_at?: string
@@ -122,4 +127,84 @@ export type TaskAssign = {
 export type DAODetail = {
   dao_id: string
   roles: string[]
+}
+
+export type Pagination = {
+  offset: number
+  limit: number
+}
+
+export type ProjectColumn = {
+  column_id: number
+  name: string
+}
+
+//Responses
+
+export type ProjectResponse = {
+  project_id: string //id
+  link_id: string //doa_id or member_id
+  type: ProjectType // member, clan, dao
+  title: string //title
+  description: string
+  visibility: Visibility //
+  start_date?: string //
+  end_date?: string //
+  created_by: string // member info
+  updated_by?: string
+  default: boolean
+  department: string
+  columns?: ProjectColumn[]
+
+  github_repos?: string[]
+  poc_member_id?: string
+  discord_channel?: string
+  captain?: string
+
+  budget_amount?: number
+  budget_currency?: string
+
+  completed: boolean
+
+  poc_member?: IMember //
+  captain_member?: IMember //
+
+  extras?: IExtras
+
+  tasks?: Task[]
+
+  created_at?: string
+  updated_at?: string
+}
+
+export type TaskResponse = {
+  task_id: string
+  project_id: string
+  title: string
+  description: string
+  col: number
+  created_by: string
+
+  updated_by?: string
+
+  poc_member_id?: string
+  github_issue?: string
+  notion_page?: string
+  tags?: string[]
+  deadline?: string
+  assignee_member?: string[]
+  assignee_clan?: string[]
+  feedback?: string
+  position: number
+  payout_amount?: number
+  payout_currency?: string
+
+  assignees?: IMember[]
+
+  files?: TaskFile[]
+  subtasks?: SubTask[]
+  comments?: Comment[]
+
+  created_at?: string
+  updated_at?: string
 }
