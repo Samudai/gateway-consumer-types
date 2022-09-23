@@ -166,8 +166,7 @@ export type ProjectResponse = {
 
   completed: boolean
 
-  poc_member?: IMember //
-  captain_member?: IMember //
+  manager?: IMember
 
   extras?: IExtras
 
