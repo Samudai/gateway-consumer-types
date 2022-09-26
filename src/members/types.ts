@@ -1,4 +1,4 @@
-import { ClanRole, InviteStatus } from './enums'
+import { ClanRole, InviteStatus, FetchMemberType } from './enums'
 
 export interface MemberSocial {
   [key: string]: string
@@ -220,4 +220,9 @@ export type ClanResponse = {
 
   created_at?: string
   updated_at?: string
+}
+
+export type MemberFetch = {
+  type: FetchMemberType
+  value: string
 }
