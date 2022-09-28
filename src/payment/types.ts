@@ -30,7 +30,7 @@ export type Provider = {
   provider_type: ProviderType
   address: string
   chain_id: number
-  default: boolean
+  is_default: boolean
   created_by: string
   created_at?: string
   updated_at?: string
