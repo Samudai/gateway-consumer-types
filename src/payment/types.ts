@@ -2,7 +2,7 @@ import { PaymentStatus, ProviderType } from './enums'
 import { IMember } from './interfaces'
 
 export type Payment = {
-  id?: string
+  id?: number
   payment_id?: string
   sender: string //Safe Address
   receiver: string //Receiver
@@ -24,7 +24,7 @@ export type Payment = {
 }
 
 export type Provider = {
-  id?: string
+  id?: number
   dao_id: string
   name: string
   provider_type: ProviderType
