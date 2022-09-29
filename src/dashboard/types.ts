@@ -12,26 +12,17 @@ export type Dashboard = {
   updated_at?: string
 }
 
-// export type Widget = {
-//     widget_id: number;
-//     widget_name: string;
-//     description: string;
-
-//     created_at?: string;
-//     updated_at?: string;
-// };
-
 export type DashboardWidget = {
-  id: number
+  dashboard_widget_id: number
   dashboard_id: string
-  type: WidgetList
+  id: WidgetList
+  name: string
   active: boolean
-  row: number
-  column: number
+  row_id: number
+  col_id: number
   order: number
   draggable: boolean
   popup_id: string
-  resizable: boolean
 
   created_at?: string
   updated_at?: string

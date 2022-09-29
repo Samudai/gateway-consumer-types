@@ -167,3 +167,19 @@ export type TokenGating = {
   created_at?: string
   updated_at?: string
 }
+
+export type Blog = {
+  id: number
+  dao_id: string
+  link: string
+  created_at?: string
+}
+export type Review = {
+  id: number
+  dao_id: string
+  member_id: string
+  content: string
+  rating?: number
+
+  created_at?: string
+}
