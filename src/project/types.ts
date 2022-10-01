@@ -46,7 +46,7 @@ export type ProjectFile = {
   project_id: string
   name: string
   url: string
-  metadata: Metadata
+  metadata?: Metadata
 
   created_at?: string
   updated_at?: string
@@ -87,7 +87,7 @@ export type TaskFile = {
   task_id: string
   name: string
   url: string
-  metadata: Metadata
+  metadata?: Metadata
 
   created_at?: string
   updated_at?: string
