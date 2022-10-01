@@ -26,3 +26,8 @@ export enum ApplicantType {
   MEMBER = 'member',
   CALN = 'clan',
 }
+
+export enum ProjectDAOType {
+  INVESTMENT = 'investment',
+  OTHERS = 'others',
+}

@@ -1,4 +1,4 @@
-import { CommentType, ProjectType, Visibility } from './enums'
+import { CommentType, ProjectType, Visibility, ProjectDAOType } from './enums'
 
 interface Metadata {
   [key: string]: string
@@ -36,7 +36,7 @@ export type Project = {
   budget_amount?: number
   budget_currency?: string
   completed: boolean
-
+  project_type?: ProjectDAOType
   created_at?: string
   updated_at?: string
 }
@@ -165,6 +165,7 @@ export type ProjectResponse = {
   budget_currency?: string
 
   completed: boolean
+  project_type?: ProjectDAOType
 
   manager?: IMember
 
