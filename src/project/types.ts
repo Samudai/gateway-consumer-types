@@ -1,4 +1,4 @@
-import { CommentType, ProjectType, Visibility, ProjectDAOType } from './enums'
+import { CommentType, LinkType, ProjectType, Visibility } from './enums'
 
 interface Metadata {
   [key: string]: string
@@ -15,9 +15,10 @@ export interface IExtras {
 }
 
 export type Project = {
-  project_id: string
+  project_id?: string
   link_id: string
-  type: ProjectType
+  type: LinkType
+  project_type: ProjectType
   title: string
   description: string
   visibility: Visibility
@@ -25,8 +26,7 @@ export type Project = {
   end_date?: string
   created_by: string
   updated_by?: string
-  default: boolean
-  department: string
+  department?: string
   columns?: ProjectColumn[]
 
   github_repos?: string[]
@@ -36,7 +36,7 @@ export type Project = {
   budget_amount?: number
   budget_currency?: string
   completed: boolean
-  project_type?: ProjectDAOType
+
   created_at?: string
   updated_at?: string
 }
@@ -59,7 +59,6 @@ export type Task = {
   description: string
   col: number
   created_by: string
-
   updated_by?: string
 
   poc_member_id?: string
@@ -71,15 +70,17 @@ export type Task = {
   assignee_clan?: string[]
   feedback?: string
   position: number
-  payout_amount?: number
-  payout_currency?: string
-
-  files?: TaskFile[]
-  subtasks?: SubTask[]
-  comments?: Comment[]
+  payout: Payout[]
 
   created_at?: string
   updated_at?: string
+}
+
+export type Payout = {
+  payout_amount: number
+  payout_currency: string
+  safe_address: string
+  token_address?: string
 }
 
 export type TaskFile = {
@@ -142,35 +143,34 @@ export type ProjectColumn = {
 //Responses
 
 export type ProjectResponse = {
-  project_id: string //id
-  link_id: string //doa_id or member_id
-  type: ProjectType // member, clan, dao
-  title: string //title
+  project_id?: string
+  link_id: string
+  type: LinkType
+  project_type: ProjectType
+  title: string
   description: string
-  visibility: Visibility //
-  start_date?: string //
-  end_date?: string //
-  created_by: string // member info
+  visibility: Visibility
+  start_date?: string
+  end_date?: string
+  created_by: string
   updated_by?: string
-  default: boolean
-  department: string
+  department?: string
   columns?: ProjectColumn[]
 
   github_repos?: string[]
   poc_member_id?: string
   discord_channel?: string
   captain?: string
-
   budget_amount?: number
   budget_currency?: string
-
   completed: boolean
-  project_type?: ProjectDAOType
+
+  access?: string
+  task_count?: number
+  completed_task_count?: number
 
   manager?: IMember
-
   extras?: IExtras
-
   tasks?: Task[]
 
   created_at?: string
@@ -184,7 +184,6 @@ export type TaskResponse = {
   description: string
   col: number
   created_by: string
-
   updated_by?: string
 
   poc_member_id?: string
@@ -196,8 +195,7 @@ export type TaskResponse = {
   assignee_clan?: string[]
   feedback?: string
   position: number
-  payout_amount?: number
-  payout_currency?: string
+  payout: Payout[]
 
   assignees?: IMember[]
 

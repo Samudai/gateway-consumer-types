@@ -1,7 +1,13 @@
-export enum ProjectType {
+export enum LinkType {
   MEMBER = 'member',
   CLAN = 'clan',
   DAO = 'dao',
+}
+
+export enum ProjectType {
+  DEFAULT = 'default',
+  INTERNAL = 'internal',
+  INVESTMENT = 'investment',
 }
 
 export enum Visibility {
@@ -10,10 +16,10 @@ export enum Visibility {
 }
 
 export enum TaskStatus {
-  TODO = 'todo',
-  IN_PROGRESS = 'in_progress',
+  TODO = 'to-do',
+  IN_PROGRESS = 'in-progress',
   DONE = 'done',
-  IN_REVIEW = 'in_review',
+  IN_REVIEW = 'in-review',
   BACKLOG = 'backlog',
 }
 
@@ -25,9 +31,4 @@ export enum CommentType {
 export enum ApplicantType {
   MEMBER = 'member',
   CALN = 'clan',
-}
-
-export enum ProjectDAOType {
-  INVESTMENT = 'investment',
-  OTHERS = 'others',
 }
