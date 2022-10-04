@@ -169,7 +169,8 @@ export type ProjectResponse = {
   task_count?: number
   completed_task_count?: number
 
-  manager?: IMember
+  poc_member?: IMember
+  captain_member?: IMember
   extras?: IExtras
   tasks?: Task[]
 
@@ -198,6 +199,7 @@ export type TaskResponse = {
   payout: Payout[]
 
   assignees?: IMember[]
+  poc_member?: IMember
 
   files?: TaskFile[]
   subtasks?: SubTask[]
