@@ -172,7 +172,7 @@ export type ProjectResponse = {
   poc_member?: IMember
   captain_member?: IMember
   extras?: IExtras
-  tasks?: Task[]
+  tasks?: TaskResponse[]
 
   created_at?: string
   updated_at?: string
