@@ -9,6 +9,7 @@ export * from './project/types'
 export * from './payment/types'
 export * from './parcel/types'
 export * from './discussions/types'
+export * from './discord/types'
 
 //Enums
 export * as AccessEnums from './access-management/enums'
