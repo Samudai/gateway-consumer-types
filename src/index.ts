@@ -10,6 +10,7 @@ export * from './payment/types'
 export * from './parcel/types'
 export * from './discussions/types'
 export * from './discord/types'
+export * from './activity/types'
 
 //Enums
 export * as AccessEnums from './access-management/enums'
@@ -20,6 +21,7 @@ export * as PluginsEnums from './plugins/enums'
 export * as ProjectEnums from './project/enums'
 export * as PaymentEnums from './payment/enums'
 export * as DiscussionEnums from './discussions/enums'
+export * as ActivityEnums from './activity/enums'
 
 //Export interfaces
 
