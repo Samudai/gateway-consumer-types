@@ -22,4 +22,5 @@ export type FormResponse = {
   type: QuestionType
   select: string[]
   answer: string
+  attachment: string
 }

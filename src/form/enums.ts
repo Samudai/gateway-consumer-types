@@ -5,5 +5,6 @@ export enum FormType {
 export enum QuestionType {
   TEXT = 'text',
   SELECT = 'select',
-  multi_select = 'multi_select',
+  MULTISELECT = 'multi_select',
+  ATTACHMENT = 'attachment',
 }
