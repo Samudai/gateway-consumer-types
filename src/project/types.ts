@@ -28,6 +28,7 @@ export type Project = {
   updated_by?: string
   department?: string
   columns?: ProjectColumn[]
+  total_col?: number
 
   github_repos?: string[]
   poc_member_id?: string
@@ -156,6 +157,7 @@ export type ProjectResponse = {
   updated_by?: string
   department?: string
   columns?: ProjectColumn[]
+  total_col?: number
 
   github_repos?: string[]
   poc_member_id?: string

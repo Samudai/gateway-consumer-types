@@ -11,6 +11,7 @@ export * from './parcel/types'
 export * from './discussions/types'
 export * from './discord/types'
 export * from './activity/types'
+export * from './form/types'
 
 //Enums
 export * as AccessEnums from './access-management/enums'
@@ -22,6 +23,7 @@ export * as ProjectEnums from './project/enums'
 export * as PaymentEnums from './payment/enums'
 export * as DiscussionEnums from './discussions/enums'
 export * as ActivityEnums from './activity/enums'
+export * as FormEnums from './form/enums'
 
 //Export interfaces
 
