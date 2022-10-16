@@ -1,4 +1,11 @@
-import { CommentType, LinkType, ProjectType, Visibility } from './enums'
+import {
+  ApplicantType,
+  CommentType,
+  LinkType,
+  ProjectType,
+  ResponseType,
+  Visibility,
+} from './enums'
 
 interface Metadata {
   [key: string]: string
@@ -174,7 +181,7 @@ export type ProjectResponse = {
   poc_member?: IMember
   captain_member?: IMember
   extras?: IExtras
-  tasks?: TaskResponse[]
+  tasks?: Task[]
 
   created_at?: string
   updated_at?: string
@@ -200,8 +207,9 @@ export type TaskResponse = {
   position: number
   payout: Payout[]
 
-  assignees?: IMember[]
   poc_member?: IMember
+
+  assignees?: IMember[]
 
   files?: TaskFile[]
   subtasks?: SubTask[]
@@ -209,4 +217,43 @@ export type TaskResponse = {
 
   created_at?: string
   updated_at?: string
+}
+
+export type FormResponseTask = {
+  response_id: string
+  project_id: string
+  response_type: ResponseType
+  mongo_object: string
+  title: string
+  col: number
+  position: number
+
+  discussion_id?: string
+  assignee_member?: string[]
+  assignee_clan?: string[]
+  updated_by?: string
+
+  created_at?: string
+  updated_at?: string
+}
+
+export type UpdateResponseColumn = {
+  response_id: string
+  col: number
+  updated_by: string
+}
+
+export type AssignResponse = {
+  type: ApplicantType
+  response_id: string
+  assignee_member?: string[]
+  assignee_clan?: string[]
+  updated_by: string
+}
+
+export type UpdateResponsePosition = {
+  response_id: string
+  position: number
+  updated_by: string
+  project_id: string
 }

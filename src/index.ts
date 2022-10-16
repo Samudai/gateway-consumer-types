@@ -12,6 +12,7 @@ export * from './discussions/types'
 export * from './discord/types'
 export * from './activity/types'
 export * from './form/types'
+export * from './web3/types'
 
 //Enums
 export * as AccessEnums from './access-management/enums'

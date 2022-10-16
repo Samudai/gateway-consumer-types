@@ -1,7 +1,7 @@
 import { WidgetList } from './enums'
 
 export type Dashboard = {
-  dashboard_id: string
+  dashboard_id?: string
   dao_id: string
   dashboard_name: string
   description: string
@@ -22,7 +22,7 @@ export type DashboardWidget = {
   col_id: number
   order: number
   draggable: boolean
-  popup_id: string
+  popup_id: number
 
   created_at?: string
   updated_at?: string

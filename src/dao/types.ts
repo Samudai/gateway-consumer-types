@@ -172,6 +172,7 @@ export type Blog = {
   id: number
   dao_id: string
   link: string
+  metadata?: any
   created_at?: string
 }
 export type Review = {

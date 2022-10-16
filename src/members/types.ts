@@ -1,4 +1,5 @@
-import { ClanRole, InviteStatus, FetchMemberType } from './enums'
+import { GuildData } from '../discord/types'
+import { ClanRole, FetchMemberType, InviteStatus } from './enums'
 
 export interface MemberSocial {
   [key: string]: string
@@ -18,6 +19,7 @@ export type Member = {
   about?: string
   skills: string[]
   profile_picture?: string
+  ceramic_stream?: string
 
   created_at?: string
   updated_at?: string
@@ -37,6 +39,7 @@ export type MemberResponse = {
   skills: string[]
   profile_picture?: string
   socials?: MemberSocial[]
+  ceramic_stream?: string
 
   discord: Discord
   wallets: WalletView[]
@@ -55,7 +58,7 @@ export type Discord = {
   flags: number
   banner: string | null
   banner_color: string | null
-  accent_color: string | null
+  accent_color: number | null
   locale: string
   mfa_enabled: boolean
   email: string
@@ -225,4 +228,50 @@ export type ClanResponse = {
 export type MemberFetch = {
   type: FetchMemberType
   value: string
+}
+
+export type GuildForMember = {
+  id: string
+  bot: boolean
+  username: string
+  discriminator: string
+  avatar: string | null
+  guild_id: string
+  joined_at: string
+  nickname: string | null
+  roles: string[]
+  guild_data: GuildData[]
+}
+
+// export type GuildData = {
+//   id: string
+//   name: string
+//   icon: string | null
+//   available: boolean
+//   splash: string | null
+//   banner: string | null
+//   description: string | null
+//   member_count: number
+//   joined_at: string
+//   max_members: number | null
+//   owner_id: string
+//   features: string[]
+// }
+
+export type MapDiscordParams = {
+  member_id: string
+  guild_info: GuildInfo[]
+}
+
+export type GuildInfo = {
+  guild_id: string
+  discord_roles: string[]
+}
+
+export type MemberReview = {
+  id: string
+  member_id: string
+  reviewer_id: string
+  content: string
+  rating: number
 }

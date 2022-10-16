@@ -1,5 +1,5 @@
-import { PaymentStatus, ProviderType } from './enums'
 import { IMember } from './interfaces'
+import { PaymentStatus, ProviderType } from './enums'
 
 export type Payment = {
   id?: number

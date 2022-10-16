@@ -8,7 +8,6 @@ export type Form = {
 }
 
 export type Question = {
-  question_id: string
   question: string
   type: QuestionType
   select: string[]
@@ -17,7 +16,7 @@ export type Question = {
 export type FormResponse = {
   response_id: string
   form_id: string
-  member_id: string
+  wallet: string
   question: string
   type: QuestionType
   select: string[]

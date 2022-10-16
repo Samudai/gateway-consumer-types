@@ -32,3 +32,7 @@ export enum ApplicantType {
   MEMBER = 'member',
   CALN = 'clan',
 }
+
+export enum ResponseType {
+  DEAL = 'deal',
+}

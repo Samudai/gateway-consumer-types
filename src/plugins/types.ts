@@ -1,12 +1,8 @@
-import { TaskStatus } from './enums'
+import { PluginType } from './enums'
 
 export type PropertyValue = {
-  name: string
+  field: string
   value: string
-}
-
-export type Property = {
-  [key in TaskStatus]: PropertyValue
 }
 
 export type CreateNotionTaskParam = {
@@ -15,11 +11,17 @@ export type CreateNotionTaskParam = {
   dao_id: string
   project_id: string
   // department: string;
-  property: Property
+  property: PropertyValue[]
   notion_property: string
 }
 
 export type NotionDatabase = {
   id: string
   name: string
+}
+
+export type Plugin = {
+  pluginType: PluginType
+  connected: boolean
+  value?: string
 }
