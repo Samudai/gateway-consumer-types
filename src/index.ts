@@ -13,6 +13,7 @@ export * from './discord/types'
 export * from './activity/types'
 export * from './form/types'
 export * from './web3/types'
+export * from './notifications/types'
 
 //Enums
 export * as AccessEnums from './access-management/enums'
@@ -25,6 +26,8 @@ export * as PaymentEnums from './payment/enums'
 export * as DiscussionEnums from './discussions/enums'
 export * as ActivityEnums from './activity/enums'
 export * as FormEnums from './form/enums'
+//export * as Web3Enums from './web3/enums'
+export * as NotificationsEnums from './notifications/enums'
 
 //Export interfaces
 

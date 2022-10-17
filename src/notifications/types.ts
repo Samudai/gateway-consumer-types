@@ -15,10 +15,10 @@ export type MemberSession = {
   connected: boolean
 }
 
-export type ErrorResponse = {
-  message: string
-  error: string
-}
+// export type ErrorResponse = {
+//   message: string
+//   error: string
+// }
 
 //Notification that is sent out
 export type WebNotification = {
