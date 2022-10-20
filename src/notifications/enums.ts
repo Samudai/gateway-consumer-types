@@ -28,7 +28,6 @@ export enum NotificationScope {
 
 export enum SocketEventsToService {
   'CONNECTION' = 'connection',
-  'DAO_CHANGE' = 'dao_change',
   'PAYMENT_CREATED_NOTIFICATION' = 'payment_created_notification',
   'CONTRIBUTOR_PAYMENT_RECEIVED' = 'contributor_payment_received',
   'JOB_APPLICANT_SUBMITTED' = 'job_applicant_submitted',
@@ -40,6 +39,7 @@ export enum SocketEventsToService {
   'SOCIAL_CONNECTION' = 'social_connection',
   'COLLLABORATION_REQUEST' = 'collaboration_request',
   'DEAL_FORM_RESPONSE' = 'deal_form_response',
+  'GENERAL_NOTIFICATION' = 'general_notification',
   'DISCONNECT' = 'disconnect',
 }
 
