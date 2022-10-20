@@ -34,10 +34,12 @@ export enum SocketEventsToService {
   'JOB_APPLICANT_SUBMITTED' = 'job_applicant_submitted',
   'BOUNTY_SUBMISSION' = 'bounty_submission',
   'TASK_REVIEW' = 'task_review',
+  'ADDED_TO_PROJECT' = 'added_to_project',
+  'ADDED_TO_TASK' = 'added_to_task',
   'MEETING_CREATED' = 'meeting_created',
   'SOCIAL_CONNECTION' = 'social_connection',
-  'PROJECT_ADDED' = 'project_added',
-  'COLLABORATION_REQUEST' = 'collaboration_request',
+  'COLLLABORATION_REQUEST' = 'collaboration_request',
+  'DEAL_FORM_RESPONSE' = 'deal_form_response',
   'DISCONNECT' = 'disconnect',
 }
 
