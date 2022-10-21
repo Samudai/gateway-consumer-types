@@ -17,9 +17,13 @@ export type FormResponse = {
   response_id: string
   form_id: string
   wallet: string
+  responses: Response[]
+}
+
+export type Response = {
   question: string
   type: QuestionType
   select: string[]
-  answer: string
+  answer: string[]
   attachment: string
 }
