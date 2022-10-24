@@ -11,35 +11,35 @@ export enum Visibility {
   PRIVATE = 'PRIVATE',
 }
 
-export enum ActionType {
-  //Project
+export declare enum ActionType {
   PROJECT_CREATED = 'projectCreated',
   PROJECT_UPDATED = 'projectUpdated',
-
-  //review
+  TASK_CREATED = 'taskCreated',
+  TASK_UPDATED = 'taskUpdated',
+  TASK_IN_REVIEW = 'taskInReview',
+  TASK_COMPLETED = 'taskCompleted',
+  CONTRIBUTOR_ADDED_TO_TASK = 'contributorAddedToTask',
+  CONTRIBUTOR_ADDED_TO_PROJECT = 'contributorAddedToProject',
   REVIEW_ADDED = 'reviewAdded',
-
-  //integrations
   SNAPSHOT_ADDED = 'snapshotAdded',
   SNAPSHOT_UPDATED = 'snapshotUpdated',
+  GITHUB_ADDED = 'githubAdded',
+  GITHUB_UPDATED = 'githubUpdated',
   GCAL_ADDED = 'gcalAdded',
   GCAL_UPDATED = 'gcalUpdated',
+  GCAL_EVENT_CREATED = 'gcalEventCreated',
   TWITTER_ADDED = 'twitterAdded',
-
-  //Blog
+  TWITTER_UPDATED = 'twitterUpdated',
   BLOG_ADDED = 'blogAdded',
-
-  //discussion
+  BLOG_UPDATED = 'blogUpdated',
   DISCUSSION_ADDED = 'discussionAdded',
   DISCUSSION_UPDATED = 'discussionUpdated',
-
-  //Access
   DAO_ACCESS_UPDATED = 'daoAccessUpdated',
   ACCESS_UPDATED = 'accessUpdated',
-
-  //common access
-
   PROJECT_COMMON_ACCESS_UPDATED = 'projectCommonAccessUpdated',
   TASK_COMMON_ACCESS_UPDATED = 'taskCommonAccessUpdated',
   VIEW_COMMON_ACCESS_UPDATED = 'viewCommonAccessUpdated',
+  CONNECTION_SENT = 'connectionSent',
+  CONNECTION_ACCEPTED = 'connectionAccepted',
+  CONNECTION_REJECTED = 'connectionRejected',
 }

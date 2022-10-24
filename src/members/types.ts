@@ -20,6 +20,8 @@ export type Member = {
   skills: string[]
   profile_picture?: string
   ceramic_stream?: string
+  subdomain?: string
+  farcaster_username?: string
 
   created_at?: string
   updated_at?: string
@@ -41,6 +43,7 @@ export type MemberResponse = {
   socials?: MemberSocial[]
   ceramic_stream?: string
   subdomain?: string
+  farcaster_username?: string
 
   discord: Discord
   wallets: WalletView[]
