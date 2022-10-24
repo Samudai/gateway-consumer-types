@@ -14,6 +14,7 @@ export enum Visibility {
 export enum ActionType {
   PROJECT_CREATED = 'projectCreated',
   PROJECT_UPDATED = 'projectUpdated',
+  PROJECT_ACCESS_UPDATED = 'projectAccessUpdated',
   TASK_CREATED = 'taskCreated',
   TASK_UPDATED = 'taskUpdated',
   TASK_IN_REVIEW = 'taskInReview',
@@ -23,6 +24,7 @@ export enum ActionType {
   REVIEW_ADDED = 'reviewAdded',
   SNAPSHOT_ADDED = 'snapshotAdded',
   SNAPSHOT_UPDATED = 'snapshotUpdated',
+  ABOUT_ADDED = 'aboutAdded',
   GITHUB_ADDED = 'githubAdded',
   GITHUB_UPDATED = 'githubUpdated',
   GCAL_ADDED = 'gcalAdded',
