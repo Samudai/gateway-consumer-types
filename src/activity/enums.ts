@@ -11,7 +11,7 @@ export enum Visibility {
   PRIVATE = 'PRIVATE',
 }
 
-export declare enum ActionType {
+export enum ActionType {
   PROJECT_CREATED = 'projectCreated',
   PROJECT_UPDATED = 'projectUpdated',
   TASK_CREATED = 'taskCreated',
