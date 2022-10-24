@@ -40,6 +40,7 @@ export type MemberResponse = {
   profile_picture?: string
   socials?: MemberSocial[]
   ceramic_stream?: string
+  subdomain?: string
 
   discord: Discord
   wallets: WalletView[]
