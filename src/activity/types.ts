@@ -1,7 +1,7 @@
 import { ActionType, Visibility } from './enums'
 
 export type Activity = {
-  dao_id: string
+  dao_id?: string
   member_id: string
   project_id?: string
   task_id?: string
