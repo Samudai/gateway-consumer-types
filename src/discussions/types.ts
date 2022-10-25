@@ -1,3 +1,4 @@
+import { IMember } from '../project/types'
 import { DiscussionCategory, MessageType } from './enums'
 
 export type Discussion = {
@@ -36,4 +37,42 @@ export type Message = {
 
   created_at?: string
   updated_at?: string
+}
+
+export type MessageResponse = {
+  message_id: string
+  discussion_id: string
+  type: MessageType
+
+  content?: string
+  sender_id: string
+  attachment_link?: string
+  metadata?: any
+
+  sender?: IMember
+
+  created_at?: string
+  updated_at?: string
+}
+
+export type DiscussionResponse = {
+  discussion_id: string
+  dao_id: string
+  topic: string
+  closed: boolean
+  description: string
+
+  category: DiscussionCategory
+  category_id: string
+  closed_on: string
+
+  updated_by: string
+
+  created_at: string
+  updated_at: string
+
+  created_by: IMember
+
+  participants: IMember[]
+  messages: MessageResponse[]
 }

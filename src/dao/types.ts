@@ -219,7 +219,9 @@ export type TeamMemberResponse = {
   member: IMember
   projects: ProjectResponse[]
   role: DAORole[]
-  last_activity: Activity[]
+  last_activity: any
+  skills: string[]
+  member_since?: string
 }
 
 export type TeamMember = {
