@@ -1,7 +1,8 @@
 export enum DiscussionCategory {
   PROPOSAL = 'proposal',
   PROJECT = 'project',
-  FORMRESPONSE = 'form-response',
+  INVESTMENT = 'investment',
+  COMMUNITY = 'community',
 }
 
 export enum MessageType {
