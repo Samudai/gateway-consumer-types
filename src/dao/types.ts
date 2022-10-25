@@ -1,4 +1,6 @@
-import { InviteStatus } from './enums'
+import { Activity } from '../activity/types'
+import { IMember, ProjectResponse } from '../project/types'
+import { DAOType, InviteStatus } from './enums'
 
 interface Requirements {
   [key: string]: string
@@ -14,7 +16,7 @@ export type DAO = {
   snapshot?: string
   owner_id?: string
   onboarding: boolean
-
+  dao_type: DAOType
   created_at?: string
   updated_at?: string
 }
@@ -58,6 +60,9 @@ export type DAOView = {
   contract_address?: string
   wallet_address?: string
   owner_id?: string
+  snapshot?: string
+
+  dao_type: DAOType
 
   members: string[]
   roles: string[]
@@ -86,16 +91,20 @@ export type MemberDAOView = {
   name: string
   guild_id: string
   onboarding: boolean
+  dao_type: DAOType
 
   about?: string
   profile_picture?: string
   owner_id?: string
+  snapshot: string
 
   roles: DAORole[]
   access: string
+  token_gating: boolean
 
-  created_at?: string
-  updated_at?: string
+  dao_created?: string
+  dao_updated?: string
+  member_joined?: string
 }
 
 export type DAOSocial = {
@@ -183,4 +192,47 @@ export type Review = {
   rating?: number
 
   created_at?: string
+}
+
+export type ReviewResponse = {
+  id: number
+  dao_id: string
+  member_id: string
+  content: string
+  rating?: number
+  member: IMember
+  created_at?: string
+}
+
+export type Analytics = {
+  dao_id: string
+  member_id: string
+  visitor_ip: string
+}
+
+export type DataPoint = {
+  date: string
+  value: number
+}
+
+export type TeamMemberResponse = {
+  member: IMember
+  projects: ProjectResponse[]
+  role: DAORole[]
+  last_activity: Activity[]
+}
+
+export type TeamMember = {
+  member_id: string
+  name?: string
+  username: string
+  profile_picture?: string
+
+  dao_id: string
+  roles?: DAORole[]
+  access?: string
+
+  task_count: number
+
+  member_joined?: string
 }
