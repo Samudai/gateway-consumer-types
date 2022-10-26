@@ -15,10 +15,10 @@ export type MemberSession = {
   connected: boolean
 }
 
-// export type ErrorResponse = {
-//   message: string
-//   error: string
-// }
+export type ErrorResponse = {
+  message: string
+  error: string
+}
 
 //Notification that is sent out
 export type WebNotification = {
@@ -35,6 +35,13 @@ export type NotificationContent = {
   notificationHeader: string
   notificationBody: string
   metaData?: any
+}
+
+export type IMember = {
+  member_id: string
+  username: string
+  profile_picture: string
+  name: string
 }
 
 export type NotificationPartialData = {
@@ -56,15 +63,17 @@ export type NotificationPartialData = {
 
 //Payments
 export type PaymentCreatedNotificationMetaData = {
+  member: IMember
   payment_id: string
   receiver: {
     username: string
+    name: string
     member_id: string
   }
   amount: string
   currency: string
   onReject: {
-    status: 'REJECTED'
+    status: 'rejected'
   }
   onApprove: {
     safeAddress: string
@@ -74,12 +83,14 @@ export type PaymentCreatedNotificationMetaData = {
 }
 
 export type PaymentReceivedNotificationMetaData = {
+  member: IMember
   payment_id: string
   payment_tx_hash: string
 }
 
 //Reviews
 export type JobApplicantNotificationMetaData = {
+  member: IMember
   applicant: {
     username: string
     member_id: string
@@ -95,6 +106,7 @@ export type JobApplicantNotificationMetaData = {
 }
 
 export type BountySubmissionNotificationMetaData = {
+  member: IMember
   bounty: {
     title: string
     bounty_id: string
@@ -110,6 +122,7 @@ export type BountySubmissionNotificationMetaData = {
 }
 
 export type TaskReviewNotificationMetaData = {
+  member: IMember
   task: {
     title: string
     task_id: string
@@ -126,6 +139,7 @@ export type TaskReviewNotificationMetaData = {
 }
 
 export type MeetingCreatedNotificationMetaData = {
+  member: IMember
   meeting: {
     title: string
     location: string
@@ -140,21 +154,23 @@ export type MeetingCreatedNotificationMetaData = {
 }
 
 export type SocialConnectionRequestNotificationMetaData = {
+  member: IMember
   from: {
     username: string
     member_id: string
   }
   onReject: {
-    status: 'REJECTED'
+    status: 'declined'
     request_id: string
   }
   onApprove: {
-    status: 'APPROVED'
+    status: 'accepted'
     request_id: string
   }
 }
 
 export type AddedToProjectNotificationMetaData = {
+  member: IMember
   project: {
     title: string
     project_id: string
@@ -166,7 +182,20 @@ export type AddedToProjectNotificationMetaData = {
   }
 }
 
+export type AddedToTaskNotificationMetaData = {
+  member: IMember
+  task: {
+    title: string
+    task_id: string
+    added_by: string
+  }
+  onView: {
+    task_id: string
+  }
+}
+
 export type CollabRequestNotificationMetaData = {
+  member: IMember
   from: {
     dao_name: string
     dao_id: string
@@ -182,5 +211,17 @@ export type CollabRequestNotificationMetaData = {
   onAccept: {
     status: 'accepted'
     collaboration_id: string
+  }
+}
+
+export type DealFormResponseNotificationMetaData = {
+  member: IMember
+  response: {
+    title: string
+    form_id: string
+    added_by: string
+  }
+  onView: {
+    form_id: string
   }
 }
