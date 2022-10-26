@@ -5,6 +5,9 @@ export type Form = {
   dao_id: string
   type: FormType
   questions: Question[]
+
+  created_at?: string
+  updated_at?: string
 }
 
 export type Question = {
@@ -18,6 +21,8 @@ export type FormResponse = {
   form_id: string
   wallet: string
   responses: Response[]
+
+  created_at?: string
 }
 
 export type Response = {

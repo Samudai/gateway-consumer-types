@@ -218,9 +218,15 @@ export type TaskResponse = {
 
   created_at?: string
   updated_at?: string
+
+  //Formresponse optional fields
+  response_id?: string
+  response_type?: ResponseType
+  mongo_object?: string
+  discussion_id?: string
 }
 
-export type FormResponseTask = {
+export type TaskFormResponse = {
   response_id: string
   project_id: string
   response_type: ResponseType

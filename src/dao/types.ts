@@ -1,4 +1,3 @@
-import { Activity } from '../activity/types'
 import { IMember, ProjectResponse } from '../project/types'
 import { DAOType, InviteStatus } from './enums'
 

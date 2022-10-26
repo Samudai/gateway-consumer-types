@@ -1,5 +1,11 @@
-import { IMember } from './interfaces'
 import { PaymentStatus, ProviderType } from './enums'
+
+export interface IMember {
+  member_id: string
+  username: string
+  profile_picture?: string
+  name?: string
+}
 
 export type Payment = {
   dao_id: string
@@ -19,7 +25,7 @@ export type Payment = {
   completed_at: string
   payment_type: string
   created_by: string
-  status: PaymentStatus
+  status: string
   chain_id: number
   updated_by: string
 
@@ -28,6 +34,27 @@ export type Payment = {
   created_at: string
   updated_at: string
 }
+
+// export type Payment = {
+//     id?: number;
+//     payment_id?: string;
+//     sender: string; //Safe Address
+//     receiver: string; //Receiver
+//     dao: string;
+//     amount: string;
+//     currency: string;
+//     task_id?: string;
+//     transaction_hash: string;
+//     payment_type: ProviderType;
+//     initiated_at: string;
+//     completed_at?: string;
+//     created_by: string;
+//     status: PaymentStatus;
+//     chain_id: number;
+
+//     created_at?: string;
+//     updated_at?: string;
+// };
 
 export type Provider = {
   id?: number

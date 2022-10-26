@@ -2,7 +2,7 @@ import { IMember } from '../project/types'
 import { DiscussionCategory, MessageType } from './enums'
 
 export type Discussion = {
-  discussion_id: string
+  discussion_id?: string
   dao_id: string
   topic: string
   closed: boolean
@@ -54,7 +54,6 @@ export type MessageResponse = {
   created_at?: string
   updated_at?: string
 }
-
 export type DiscussionResponse = {
   discussion_id: string
   dao_id: string
