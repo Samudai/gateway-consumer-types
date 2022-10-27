@@ -25,6 +25,7 @@ export type DiscoverMemberResponse = {
   username: string
   name: string
   profile_picture?: string
+  skills: string[]
 
   badges_earned?: number
 
