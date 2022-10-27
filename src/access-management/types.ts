@@ -6,7 +6,7 @@ export type ProjectAccess = {
   access: AccessType
   members: string[]
   roles: string[]
-
+  invite_link: string
   created_at?: string
   updated_at?: string
 }

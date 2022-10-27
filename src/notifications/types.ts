@@ -15,6 +15,11 @@ export type MemberSession = {
   connected: boolean
 }
 
+export type ErrorResponse = {
+  message: string
+  error: string
+}
+
 //Notification that is sent out
 export type WebNotification = {
   notificationId: string
@@ -212,11 +217,24 @@ export type CollabRequestNotificationMetaData = {
 export type DealFormResponseNotificationMetaData = {
   member: IMember
   response: {
+    project_id: string
     title: string
     form_id: string
     added_by: string
   }
   onView: {
     form_id: string
+  }
+}
+
+export type DiscussionCreatedNotificationMetaData = {
+  member: IMember
+  discussion: {
+    title: string
+    discussion_id: string
+    created_by: string
+  }
+  onView: {
+    discussion_id: string
   }
 }
