@@ -37,6 +37,7 @@ export type Project = {
   department?: string
   columns?: ProjectColumn[]
   total_col?: number
+  pinned: boolean
 
   github_repos?: string[]
   poc_member_id?: string
@@ -172,6 +173,7 @@ export type ProjectResponse = {
   department?: string
   columns?: ProjectColumn[]
   total_col?: number
+  pinned: boolean
 
   github_repos?: string[]
   poc_member_id?: string
