@@ -83,6 +83,12 @@ export type Task = {
 
   created_at?: string
   updated_at?: string
+
+  //Formresponse optional fields
+  response_id?: string
+  response_type?: ResponseType
+  mongo_object?: string
+  discussion_id?: string
 }
 
 export type Payout = {
