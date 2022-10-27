@@ -237,3 +237,14 @@ export type TeamMember = {
 
   member_joined?: string
 }
+
+export type FavouriteDAOResponse = {
+  favourite_id: string
+  dao_id: string
+  member_id: string
+
+  created_at?: string
+
+  name: string
+  profile_picture?: string
+}

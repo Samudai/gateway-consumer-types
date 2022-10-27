@@ -275,3 +275,17 @@ export type MemberReview = {
   content: string
   rating: number
 }
+
+export type MemberReviewResponse = {
+  id: string
+  member_id: string
+  reviewer_id: string
+  content: string
+  rating: number
+
+  created_at?: string
+
+  name: string
+  username: string
+  profile_picture: string
+}
