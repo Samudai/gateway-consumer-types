@@ -30,6 +30,7 @@ export enum SocketEventsToService {
   'CONNECTION' = 'connection',
   'PAYMENT_CREATED_NOTIFICATION' = 'payment_created_notification',
   'CONTRIBUTOR_PAYMENT_RECEIVED' = 'contributor_payment_received',
+  'PAYMENT_COMPLETED_NOTIFICATION' = 'payment_completed_notification',
   'JOB_APPLICANT_SUBMITTED' = 'job_applicant_submitted',
   'BOUNTY_SUBMISSION' = 'bounty_submission',
   'TASK_REVIEW' = 'task_review',
@@ -39,6 +40,7 @@ export enum SocketEventsToService {
   'SOCIAL_CONNECTION' = 'social_connection',
   'COLLLABORATION_REQUEST' = 'collaboration_request',
   'DEAL_FORM_RESPONSE' = 'deal_form_response',
+  'DISCUSSION_CREATED' = 'discussion_created',
   'GENERAL_NOTIFICATION' = 'general_notification',
   'DISCONNECT' = 'disconnect',
 }
