@@ -95,7 +95,7 @@ export type Task = {
 
 export type Payout = {
   provider: Provider
-  receiver_address: string
+  receiver_address: string[]
   payout_amount: number
   payout_currency: string
   safe_address: string
