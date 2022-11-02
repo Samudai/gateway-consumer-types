@@ -189,7 +189,7 @@ export type ProjectResponse = {
   access?: string
   task_count?: number
   completed_task_count?: number
-
+  contributors: IMember[]
   poc_member?: IMember
   captain_member?: IMember
   extras?: IExtras
@@ -218,6 +218,8 @@ export type TaskResponse = {
   feedback?: string
   position: number
   payout: Payout[]
+  vc_claim?: boolean
+  payment_created?: boolean
 
   poc_member?: IMember
 

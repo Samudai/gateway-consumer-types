@@ -59,7 +59,8 @@ export type DiscussionResponse = {
   dao_id: string
   topic: string
   closed: boolean
-  description: string
+  description?: string
+  proposal_id?: string
 
   category: DiscussionCategory
   category_id: string
