@@ -48,7 +48,7 @@ export type Project = {
   budget_currency?: string
   completed: boolean
 
-  contributors?: string
+  contributors?: string[]
 
   created_at?: string
   updated_at?: string
@@ -97,7 +97,7 @@ export type Task = {
 
 export type Payout = {
   provider: Provider
-  receiver_address?: string[]
+  receiver_address: string
   payout_amount: number
   payout_currency: string
   safe_address: string
