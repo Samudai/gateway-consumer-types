@@ -5,7 +5,7 @@ import {
   LinkType,
   ProjectType,
   ResponseType,
-  Visibility
+  Visibility,
 } from './enums'
 
 interface Metadata {
