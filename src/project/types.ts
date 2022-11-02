@@ -5,7 +5,7 @@ import {
   LinkType,
   ProjectType,
   ResponseType,
-  Visibility,
+  Visibility
 } from './enums'
 
 interface Metadata {
@@ -47,6 +47,8 @@ export type Project = {
   budget_amount?: number
   budget_currency?: string
   completed: boolean
+
+  contributors?: string
 
   created_at?: string
   updated_at?: string
@@ -189,7 +191,8 @@ export type ProjectResponse = {
   access?: string
   task_count?: number
   completed_task_count?: number
-  contributors: IMember[]
+  contributors: string[]
+  contributor_list: IMember[]
   poc_member?: IMember
   captain_member?: IMember
   extras?: IExtras
