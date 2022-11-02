@@ -191,8 +191,8 @@ export type ProjectResponse = {
   access?: string
   task_count?: number
   completed_task_count?: number
-  contributors: string[]
-  contributor_list: IMember[]
+  contributors?: string[]
+  contributor_list?: IMember[]
   poc_member?: IMember
   captain_member?: IMember
   extras?: IExtras
