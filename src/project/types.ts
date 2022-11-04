@@ -1,3 +1,4 @@
+//import { Provider } from '../../paymentController/utils/types'
 import { Provider } from '../payment/types'
 import {
   ApplicantType,
@@ -49,6 +50,7 @@ export type Project = {
   completed: boolean
 
   contributors?: string[]
+  contributor_list?: IMember[]
 
   created_at?: string
   updated_at?: string
@@ -84,7 +86,8 @@ export type Task = {
   feedback?: string
   position: number
   payout: Payout[]
-
+  vc_claim?: boolean
+  payment_created?: boolean
   created_at?: string
   updated_at?: string
 
@@ -96,12 +99,15 @@ export type Task = {
 }
 
 export type Payout = {
+  id: string
+  name: string
   provider: Provider
-  receiver_address: string
+  receiver_address?: string
   payout_amount: number
   payout_currency: string
   safe_address: string
   token_address?: string
+  completed: boolean
 }
 
 export type TaskFile = {
@@ -191,12 +197,14 @@ export type ProjectResponse = {
   access?: string
   task_count?: number
   completed_task_count?: number
-  contributors?: string[]
-  contributor_list?: IMember[]
+
   poc_member?: IMember
   captain_member?: IMember
   extras?: IExtras
   tasks?: Task[]
+
+  contributors?: string[]
+  contributor_list?: IMember[]
 
   created_at?: string
   updated_at?: string
@@ -221,6 +229,7 @@ export type TaskResponse = {
   feedback?: string
   position: number
   payout: Payout[]
+
   vc_claim?: boolean
   payment_created?: boolean
 
@@ -234,12 +243,6 @@ export type TaskResponse = {
 
   created_at?: string
   updated_at?: string
-
-  //Formresponse optional fields
-  response_id?: string
-  response_type?: ResponseType
-  mongo_object?: string
-  discussion_id?: string
 }
 
 export type TaskFormResponse = {
@@ -279,4 +282,24 @@ export type UpdateResponsePosition = {
   position: number
   updated_by: string
   project_id: string
+}
+
+export type UpdateProjectPinned = {
+  project_id: string
+  pinned: boolean
+  updated_by: string
+  link_id: string
+}
+
+export type FileFolder = {
+  folder_id: string
+  project_id: string
+  name: string
+
+  description?: string
+  created_by?: string
+  updated_by?: string
+
+  created_at?: string
+  updated_at?: string
 }
