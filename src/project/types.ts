@@ -58,7 +58,7 @@ export type Project = {
 
 export type ProjectFile = {
   project_file_id: string
-  project_id: string
+  folder_id: string
   name: string
   url: string
   metadata?: Metadata
