@@ -279,7 +279,7 @@ export type GuildInfo = {
   joined_at: string
 }
 
-export type Review = {
+export type MemberReview = {
   id: string
   member_id: string
   reviewer_id: string
