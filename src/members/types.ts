@@ -19,6 +19,9 @@ export type Member = {
   skills: string[]
   profile_picture?: string
   ceramic_stream?: string
+  subdomain?: string
+
+  invite_code?: string
 
   created_at?: string
   updated_at?: string
@@ -39,16 +42,21 @@ export type MemberResponse = {
   profile_picture?: string
   socials?: MemberSocial[]
   ceramic_stream?: string
+  subdomain?: string
 
-  discord: Discord
+  discord: MemberDiscord
   wallets: WalletView[]
+  default_wallet_address: string
+
+  invite_code?: string
+  invite_count: number
 
   created_at?: string
   updated_at?: string
 }
 
-//Discord
-export type Discord = {
+// MemberDiscord
+export type MemberDiscord = {
   discord_user_id: string
   username: string
   avatar: string
@@ -109,7 +117,7 @@ export type Onboarding = {
   member_id: string
   admin: boolean
   contributor: boolean
-  type_of_work: string[]
+  invite_code: string
 }
 
 export type MemberFilter = {
@@ -129,6 +137,9 @@ export type ConnectionRequest = {
 
 export type Connection = {
   member: Member
+  id: string
+  sender_id?: string
+  receiver_id?: string
   status: InviteStatus
 }
 
@@ -268,7 +279,7 @@ export type GuildInfo = {
   joined_at: string
 }
 
-export type MemberReview = {
+export type Review = {
   id: string
   member_id: string
   reviewer_id: string
