@@ -1,4 +1,4 @@
-import { ClanRole, FetchMemberType, InviteStatus } from './enums'
+import { ClanRole, FetchMemberType, InviteStatus, RewardType } from './enums'
 
 export interface MemberSocial {
   [key: string]: string
@@ -94,11 +94,7 @@ export type WalletView = {
   wallet_id: string
   wallet_address: string
   chain_id: string
-  chain: string
   default: boolean
-  network: string
-  currency: string
-  type: string
 }
 
 //Socials
@@ -299,4 +295,15 @@ export type MemberReviewResponse = {
   name: string
   username: string
   profile_picture: string
+}
+
+export type MemberReward = {
+  member_id: string
+  dao_id: string
+  link_id: string
+  type: RewardType
+  amount: number
+  currency: string
+
+  created_at?: string
 }

@@ -16,3 +16,8 @@ export enum FetchMemberType {
   WALLET_ADDRESS = 'wallet_address',
   DISCORD_ID = 'discord_user_id',
 }
+
+export enum RewardType {
+  TASK = 'task',
+  BOUNTY = 'bounty',
+}
