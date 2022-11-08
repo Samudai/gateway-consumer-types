@@ -21,7 +21,7 @@ export type FormResponse = {
   form_id: string
   wallet: string
   responses: Response[]
-
+  metadata?: SupportData
   created_at?: string
 }
 
@@ -31,4 +31,9 @@ export type Response = {
   select: string[]
   answer: string[]
   attachment: string
+}
+
+export type SupportData = {
+  member_id: string
+  user_agent: string
 }
