@@ -138,6 +138,8 @@ export type Comment = {
   author: string
   type: CommentType
 
+  author_member?: IMember
+
   tagged_members?: string[]
 
   created_at?: string
