@@ -1,7 +1,9 @@
 export enum FormType {
   DEAL = 'deal',
+  SUPPORT = 'support',
+  ONBOARDING = 'onboarding',
+  GRANT = 'grant',
 }
-
 export enum QuestionType {
   TEXT = 'text',
   SELECT = 'select',
