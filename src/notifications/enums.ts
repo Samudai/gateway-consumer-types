@@ -41,6 +41,7 @@ export enum SocketEventsToService {
   'COLLLABORATION_REQUEST' = 'collaboration_request',
   'DEAL_FORM_RESPONSE' = 'deal_form_response',
   'DISCUSSION_CREATED' = 'discussion_created',
+  'INVITED_TO_DISCUSSION' = 'invited_to_discussion',
   'GENERAL_NOTIFICATION' = 'general_notification',
   'DISCONNECT' = 'disconnect',
 }

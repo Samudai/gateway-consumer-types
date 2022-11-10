@@ -233,3 +233,16 @@ export type DiscussionCreatedNotificationMetaData = {
     discussion_id: string
   }
 }
+
+export type DiscussionInvitationNotificationMetaData = {
+  member: IMember
+  discussion: {
+    title: string
+    discussion_id: string
+    created_by: string
+  }
+  onView: {
+    discussion_id: string
+    dao_id: string
+  }
+}
