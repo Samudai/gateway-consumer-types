@@ -75,27 +75,35 @@ export type Task = {
   col: number
   created_by: string
   updated_by?: string
+  position: number
 
   poc_member_id?: string
-  github_issue?: string
+  github_issue?: number
   notion_page?: string
   tags?: string[]
   deadline?: string
   assignee_member?: string[]
   assignee_clan?: string[]
   feedback?: string
-  position: number
   payout: Payout[]
   vc_claim?: string[]
   payment_created?: boolean
   created_at?: string
   updated_at?: string
+  github_pr?: GithubPR
 
   //Formresponse optional fields
   response_id?: string
   response_type?: ResponseType
   mongo_object?: string
   discussion_id?: string
+}
+
+export type GithubPR = {
+  id: string
+  title: string
+  html_url: string
+  state: string
 }
 
 export type Payout = {
@@ -220,23 +228,22 @@ export type TaskResponse = {
   col: number
   created_by: string
   updated_by?: string
+  position: number
 
   poc_member_id?: string
-  github_issue?: string
+  github_issue?: number
   notion_page?: string
   tags?: string[]
   deadline?: string
   assignee_member?: string[]
   assignee_clan?: string[]
   feedback?: string
-  position: number
   payout: Payout[]
+  github_pr?: GithubPR
 
   vc_claim?: string[]
   payment_created?: boolean
-
   poc_member?: IMember
-
   assignees?: IMember[]
 
   files?: TaskFile[]
@@ -245,12 +252,6 @@ export type TaskResponse = {
 
   created_at?: string
   updated_at?: string
-
-  //Formresponse optional fields
-  response_id?: string
-  response_type?: ResponseType
-  mongo_object?: string
-  discussion_id?: string
 }
 
 export type TaskFormResponse = {
