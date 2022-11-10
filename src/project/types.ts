@@ -86,7 +86,7 @@ export type Task = {
   feedback?: string
   position: number
   payout: Payout[]
-  vc_claim?: boolean
+  vc_claim?: string[]
   payment_created?: boolean
   created_at?: string
   updated_at?: string
@@ -232,7 +232,7 @@ export type TaskResponse = {
   position: number
   payout: Payout[]
 
-  vc_claim?: boolean
+  vc_claim?: string[]
   payment_created?: boolean
 
   poc_member?: IMember
@@ -310,4 +310,12 @@ export type FileFolder = {
 
   created_at?: string
   updated_at?: string
+}
+
+export type TaskCredentials = {
+  task_id: string
+  member_id: string
+  claim: boolean
+
+  created_at?: string
 }
