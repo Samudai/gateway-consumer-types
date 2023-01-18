@@ -245,6 +245,7 @@ export type TaskResponse = {
   payment_created?: boolean
   poc_member?: IMember
   assignees?: IMember[]
+  created_by_member?: IMember
 
   files?: TaskFile[]
   subtasks?: SubTask[]
