@@ -44,4 +44,7 @@ export enum ActionType {
   CONNECTION_SENT = 'connectionSent',
   CONNECTION_ACCEPTED = 'connectionAccepted',
   CONNECTION_REJECTED = 'connectionRejected',
+  VIEW_CRETAED = 'viewCreated',
+  VIEW_RENAMED = 'viewRenamed',
+  VIEW_DELETED = 'viewDeleted',
 }
