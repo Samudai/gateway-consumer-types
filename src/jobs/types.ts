@@ -39,6 +39,7 @@ export type Opportunity = {
   poc_member_id?: string
   questions?: Questions
   captain: boolean
+  department?: string
 
   skills: string[]
   tags: string[]
