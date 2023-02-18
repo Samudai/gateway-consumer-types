@@ -24,3 +24,16 @@ export enum ApplicantStatusType {
   ACCEPTED = 'accepted',
   REJECTED = 'rejected',
 }
+
+export enum OpportunityOpenTo {
+  DAOs = 'DAOs',
+  DAO_MEMBERS = 'DAO Members',
+  CAPTAINS = 'Captains',
+  CONTRIBUTORS = 'Contributors',
+}
+
+export enum JobFormat {
+  FULL_TIME = 'Full Time',
+  REMOTE = 'Remote',
+  FREELANCE = 'Freelance',
+}

@@ -1,4 +1,11 @@
-import { ApplicantStatusType, JobStatus, JobType, Visibility } from './enums'
+import {
+  ApplicantStatusType,
+  JobFormat,
+  JobStatus,
+  JobType,
+  OpportunityOpenTo,
+  Visibility,
+} from './enums'
 
 interface Questions {
   [key: number]: string
@@ -35,6 +42,9 @@ export type Opportunity = {
 
   skills: string[]
   tags: string[]
+  experience: number
+  open_to: OpportunityOpenTo[]
+  job_format: JobFormat
 
   created_at?: string
   updated_at?: string
