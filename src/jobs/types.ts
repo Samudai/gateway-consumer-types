@@ -94,9 +94,9 @@ export type JobFile = {
 export type Bounty = {
   bounty_id: string
   dao_id: string
-  project_id: string
+  project_id?: string
   title: string
-  description: string
+  description?: string
   payout_amount: number
   payout_currency: string
   winner_count: number
@@ -107,11 +107,12 @@ export type Bounty = {
   start_date?: string
   end_date?: string
 
-  req_people_count: number
-  poc_member_id: string
+  req_people_count?: number
+  poc_member_id?: string
 
-  tags: string[]
-  skills: string[]
+  department?: string
+  tags?: string[]
+  skills?: string[]
 
   created_at?: string
   updated_at?: string
