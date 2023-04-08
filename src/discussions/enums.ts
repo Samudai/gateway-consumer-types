@@ -8,4 +8,5 @@ export enum DiscussionCategory {
 export enum MessageType {
   TEXT = 'text',
   FILE = 'file',
+  GIF = 'gif',
 }
