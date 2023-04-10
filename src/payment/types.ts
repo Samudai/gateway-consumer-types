@@ -1,0 +1,70 @@
+import { PaymentStatus, ProviderType } from './enums'
+
+export interface IMember {
+  member_id: string
+  username: string
+  profile_picture?: string
+  name?: string
+}
+
+export type Payment = {
+  dao_id: string
+  payment_id: string
+  sender: string
+  receiver: string
+  value: [
+    {
+      amount: string
+      currency: string
+      contract_address: string
+    }
+  ]
+  task_id: string
+  transaction_hash: string
+  initiated_at: string
+  completed_at: string
+  payment_type: string
+  created_by: string
+  status: string
+  chain_id: number
+  updated_by: string
+
+  approver?: IMember
+
+  created_at: string
+  updated_at: string
+}
+
+// export type Payment = {
+//     id?: number;
+//     payment_id?: string;
+//     sender: string; //Safe Address
+//     receiver: string; //Receiver
+//     dao: string;
+//     amount: string;
+//     currency: string;
+//     task_id?: string;
+//     transaction_hash: string;
+//     payment_type: ProviderType;
+//     initiated_at: string;
+//     completed_at?: string;
+//     created_by: string;
+//     status: PaymentStatus;
+//     chain_id: number;
+
+//     created_at?: string;
+//     updated_at?: string;
+// };
+
+export type Provider = {
+  id?: number
+  dao_id: string
+  name: string
+  provider_type: ProviderType
+  address: string
+  chain_id: number
+  is_default: boolean
+  created_by: string
+  created_at?: string
+  updated_at?: string
+}
