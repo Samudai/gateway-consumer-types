@@ -10,9 +10,14 @@ export type Discussion = {
   category_id?: string
 
   description?: string
+  description_raw?: string
   created_by?: string
   updated_by?: string
 
+  proposal_id?: string
+  tags?: string[]
+  pinned?: boolean
+  last_comment_at?: string
   created_at?: string
   updated_at?: string
 }
