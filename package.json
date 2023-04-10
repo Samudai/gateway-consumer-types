@@ -1,6 +1,6 @@
 {
   "name": "@samudai_xyz/gateway-consumer-types",
-  "version": "0.7.11",
+  "version": "0.7.12",
   "description": "## Usage",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
