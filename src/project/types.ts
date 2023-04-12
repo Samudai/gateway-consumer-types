@@ -87,7 +87,7 @@ export type Task = {
     assignee_member?: string[];
     assignee_clan?: string[];
     feedback?: string;
-    payout: Payout[];
+    payout?: Payout[];
     vc_claim?: string[];
     payment_created?: boolean;
     created_at?: string;
@@ -261,7 +261,7 @@ export type TaskResponse = {
     assignee_member?: string[];
     assignee_clan?: string[];
     feedback?: string;
-    payout: Payout[];
+    payout?: Payout[];
     github_pr?: GithubPR;
     archived?: boolean;
 
