@@ -88,6 +88,7 @@ export type DiscussionResponse = {
 
   participants: IMember[]
   messages: MessageResponse[]
+  message_count: number
 
   opted_in?: boolean
 }
