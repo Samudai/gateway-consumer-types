@@ -92,3 +92,14 @@ export type DiscussionResponse = {
 
   opted_in?: boolean
 }
+
+export type UpdateBookmark = {
+  discussion_id: string
+  pinned: boolean
+  updated_by: string
+}
+
+export type BulkParticipantRequest = {
+  discussion_id: string
+  participants: string[]
+}
