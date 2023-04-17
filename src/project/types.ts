@@ -99,6 +99,8 @@ export type Task = {
     response_type?: ResponseType;
     mongo_object?: string;
     discussion_id?: string;
+    // extra field
+    payoutids?: string[];
 };
 
 export type GithubPR = {
@@ -111,14 +113,15 @@ export type GithubPR = {
 export type Payout = {
     payout_id: string;
     name: string;
-    link_type : string;
-    link_id : string;
+    link_type: string;
+    link_id: string;
     provider_id: string;
     receiver_address?: string;
     payout_amount: number;
     payout_currency: string;
     token_address?: string;
     completed: boolean;
+    provider_exists?: boolean;
 };
 
 export type TaskFile = {
@@ -150,12 +153,14 @@ export type SubTask = {
     notion_page?: string;
     notion_property?: string;
     col?: number;
-    payout?: Payout;
+    payout?: Payout[];
     payment_created?: boolean;
     github_pr?: string;
     archived?: boolean;
     associated_job_type?: string;
     associated_job_id?: string;
+    // extra field
+    payoutids?: string[];
 
     created_at?: string;
     updated_at?: string;
