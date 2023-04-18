@@ -13,6 +13,7 @@ export type Discussion = {
   description_raw?: string
   created_by?: string
   updated_by?: string
+  views?: number
 
   proposal_id?: string
   tags?: string[]
@@ -65,6 +66,8 @@ export type DiscussionResponse = {
   topic: string
   closed: boolean
   description?: string
+  description_raw?: string
+
   proposal_id?: string
 
   category: DiscussionCategory
@@ -75,11 +78,28 @@ export type DiscussionResponse = {
 
   created_at: string
   updated_at: string
+  views?: number
+
+  tags?: string[]
+  pinned?: boolean
+  last_comment_at?: string
 
   created_by: IMember
 
   participants: IMember[]
   messages: MessageResponse[]
+  message_count: number
 
   opted_in?: boolean
+}
+
+export type UpdateBookmark = {
+  discussion_id: string
+  pinned: boolean
+  updated_by: string
+}
+
+export type BulkParticipantRequest = {
+  discussion_id: string
+  participants: string[]
 }
