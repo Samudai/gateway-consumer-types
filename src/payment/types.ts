@@ -57,6 +57,7 @@ export type Payment = {
 // };
 
 export type Provider = {
+  provider_id: string;
   id?: number
   dao_id: string
   name: string
