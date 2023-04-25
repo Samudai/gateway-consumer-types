@@ -44,7 +44,7 @@
     "url": "https://github.com/Samudai/gateway-consumer-types/issues"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
+    "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^13.1.0",
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
