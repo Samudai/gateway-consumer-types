@@ -26,6 +26,9 @@ export type Activity = {
   task?: {
     task_name: string
   }
+  subtask?:{
+    subtask_name: string
+  }
   action: {
     message: string
   }
