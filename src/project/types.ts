@@ -270,6 +270,7 @@ export type TaskResponse = {
     payout?: Payout[];
     github_pr?: GithubPR;
     archived?: boolean;
+    completed_subtask_count?: number;
 
     vc_claim?: string[];
     payment_created?: boolean;
