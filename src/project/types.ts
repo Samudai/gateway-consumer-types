@@ -113,6 +113,7 @@ export type GithubPR = {
 export type Payout = {
     payout_id: string;
     name: string;
+    member_id: string;
     link_type: string;
     link_id: string;
     provider_id: string;
