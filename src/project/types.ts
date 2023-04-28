@@ -287,6 +287,39 @@ export type TaskResponse = {
     updated_at?: string;
 };
 
+export type SubTaskResponse = {
+    subtask_id?: string;
+    project_id: string;
+    task_id: string;
+    title: string;
+    created_by: string;
+    updated_by?: string;
+    description?: string;
+    description_raw?: string;
+    deadline?: string;
+    completed?: boolean;
+    poc_member_id: string;
+    assignee_member?: string[];
+    github_issue?: string;
+    position: number;
+    notion_page?: string;
+    notion_property?: string;
+    col?: number;
+    payout?: Payout[];
+    payment_created?: boolean;
+    github_pr?: string;
+    archived?: boolean;
+    associated_job_type?: string;
+    associated_job_id?: string;
+
+    poc_member?: IMember;
+    assignees?: IMember[];
+    created_by_member?: IMember;
+
+    created_at?: string;
+    updated_at?: string;
+};
+
 export type TaskFormResponse = {
     response_id: string;
     project_id: string;
