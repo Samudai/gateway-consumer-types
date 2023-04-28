@@ -18,6 +18,8 @@ export type DAO = {
   dao_type: DAOType
   created_at?: string
   updated_at?: string
+  open_to_collaboration?: boolean
+	tags?: string[]
 }
 
 export type DAOMember = {
@@ -70,6 +72,8 @@ export type DAOView = {
 
   created_at?: string
   updated_at?: string
+  open_to_collaboration?: boolean
+	tags : string[]
 }
 
 export type DAOInvite = {
@@ -104,6 +108,8 @@ export type MemberDAOView = {
   dao_created?: string
   dao_updated?: string
   member_joined?: string
+  open_to_collaboration?: boolean
+	tags : string[]
 }
 
 export type DAOSocial = {
