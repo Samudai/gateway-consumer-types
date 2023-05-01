@@ -94,6 +94,8 @@ export type Task = {
     updated_at?: string;
     github_pr?: GithubPR;
     archived?: boolean;
+    associated_job_type?: string;
+    associated_job_id?: string;
     //Formresponse optional fields
     response_id?: string;
     response_type?: ResponseType;
@@ -271,6 +273,8 @@ export type TaskResponse = {
     payout?: Payout[];
     github_pr?: GithubPR;
     archived?: boolean;
+    associated_job_type?: string;
+    associated_job_id?: string;
     completed_subtask_count?: number;
 
     vc_claim?: string[];
