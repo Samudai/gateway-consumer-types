@@ -5,6 +5,7 @@ import {
   JobType,
   OpportunityOpenTo,
   Visibility,
+  JobPayoutStatus
 } from './enums'
 
 interface Questions {
@@ -114,6 +115,8 @@ export type Bounty = {
   tags?: string[]
   skills?: string[]
 
+  updated_by?: string
+
   created_at?: string
   updated_at?: string
 }
@@ -160,4 +163,19 @@ export type FavouriteJob = {
   member_id: string
 
   created_at?: string
+}
+
+export type JobPayout = {
+  payout_id: string
+  name: string
+  link_type: string
+  link_id: string
+  provider_id: string
+  receiver_address?: string
+  payout_amount: number
+  payout_currency: string
+  token_address?: string
+  completed: boolean
+  provider_exists?: boolean
+  status: JobPayoutStatus
 }

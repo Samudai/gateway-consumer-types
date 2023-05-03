@@ -20,7 +20,7 @@ export type Member = {
   profile_picture?: string
   ceramic_stream?: string
   subdomain?: string
-
+  tags?: string[]
   invite_code?: string
 
   created_at?: string
@@ -43,7 +43,7 @@ export type MemberResponse = {
   socials?: MemberSocial[]
   ceramic_stream?: string
   subdomain?: string
-
+  tags?: string[]
   discord: MemberDiscord
   wallets: WalletView[]
   default_wallet_address: string

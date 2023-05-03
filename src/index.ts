@@ -15,6 +15,7 @@ export * from './form/types'
 export * from './web3/types'
 export * from './notifications/types'
 export * from './discovery/types'
+// export * from './cron/types'
 
 //Enums
 export * as AccessEnums from './access-management/enums'
@@ -30,6 +31,7 @@ export * as FormEnums from './form/enums'
 //export * as Web3Enums from './web3/enums'
 export * as NotificationsEnums from './notifications/enums'
 export * as DiscoveryEnums from './discovery/enums'
+export * as CronEnums from './cron/enums'
 
 //Export interfaces
 

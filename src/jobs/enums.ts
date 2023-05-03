@@ -37,3 +37,14 @@ export enum JobFormat {
   REMOTE = 'Remote',
   FREELANCE = 'Freelance',
 }
+
+export enum JobPayoutLinkType {
+  TASK = 'task',
+  BOUNTY = 'bounty'
+}
+
+export enum JobPayoutStatus { 
+  UNASSIGNED = 'unassigned',
+  MPT = 'moved_to_project',
+  COMPLETED = 'completed'
+}
