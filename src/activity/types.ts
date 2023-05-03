@@ -5,6 +5,7 @@ export type Activity = {
   member_id: string
   project_id?: string
   task_id?: string
+  subtask_id?: string
   discussion_id?: string
   job_id?: string
   payment_id?: string
@@ -24,6 +25,9 @@ export type Activity = {
   }
   task?: {
     task_name: string
+  }
+  subtask?:{
+    subtask_name: string
   }
   action: {
     message: string

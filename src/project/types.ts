@@ -94,6 +94,8 @@ export type Task = {
     updated_at?: string;
     github_pr?: GithubPR;
     archived?: boolean;
+    associated_job_type?: string;
+    associated_job_id?: string;
     //Formresponse optional fields
     response_id?: string;
     response_type?: ResponseType;
@@ -113,6 +115,7 @@ export type GithubPR = {
 export type Payout = {
     payout_id: string;
     name: string;
+    member_id: string;
     link_type: string;
     link_id: string;
     provider_id: string;
@@ -270,6 +273,9 @@ export type TaskResponse = {
     payout?: Payout[];
     github_pr?: GithubPR;
     archived?: boolean;
+    associated_job_type?: string;
+    associated_job_id?: string;
+    completed_subtask_count?: number;
 
     vc_claim?: string[];
     payment_created?: boolean;
@@ -280,6 +286,39 @@ export type TaskResponse = {
     files?: TaskFile[];
     subtasks?: SubTask[];
     comments?: Comment[];
+
+    created_at?: string;
+    updated_at?: string;
+};
+
+export type SubTaskResponse = {
+    subtask_id?: string;
+    project_id: string;
+    task_id: string;
+    title: string;
+    created_by: string;
+    updated_by?: string;
+    description?: string;
+    description_raw?: string;
+    deadline?: string;
+    completed?: boolean;
+    poc_member_id: string;
+    assignee_member?: string[];
+    github_issue?: string;
+    position: number;
+    notion_page?: string;
+    notion_property?: string;
+    col?: number;
+    payout?: Payout[];
+    payment_created?: boolean;
+    github_pr?: string;
+    archived?: boolean;
+    associated_job_type?: string;
+    associated_job_id?: string;
+
+    poc_member?: IMember;
+    assignees?: IMember[];
+    created_by_member?: IMember;
 
     created_at?: string;
     updated_at?: string;
