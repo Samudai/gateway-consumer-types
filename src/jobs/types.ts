@@ -26,6 +26,7 @@ export type Opportunity = {
   type: JobType
   title: string
   description: string
+  description_raw: string
   created_by: string
   visibility: Visibility
   status: JobStatus
@@ -33,9 +34,10 @@ export type Opportunity = {
 
   start_date?: string
   end_date?: string
-
+  payout?: JobPayout[]
   project_id?: string
   task_id?: string
+  subtask_id?: string
   github?: string
   poc_member_id?: string
   questions?: Questions
@@ -50,9 +52,6 @@ export type Opportunity = {
 
   created_at?: string
   updated_at?: string
-
-  payout_amount: number
-  payout_currency: string
 }
 
 export type Applicant = {
@@ -63,6 +62,7 @@ export type Applicant = {
   answers: Answers
   status: ApplicantStatusType
   applicant: string
+  updated_by?: string
 
   created_at?: string
   updated_at?: string
@@ -98,16 +98,18 @@ export type Bounty = {
   project_id?: string
   title: string
   description?: string
-  payout_amount: number
-  payout_currency: string
+  description_raw?: string
   winner_count: number
   created_by: string
   visibility: Visibility
   status: JobStatus
 
+  task_id: string
+  subtask_id: string
+  
   start_date?: string
   end_date?: string
-
+  payout?: JobPayout[]
   req_people_count?: number
   poc_member_id?: string
 
