@@ -236,6 +236,7 @@ export type ProjectResponse = {
 
     access?: string;
     task_count?: number;
+    total_jobs_posted?: number;
     completed_task_count?: number;
 
     poc_member?: IMember;
