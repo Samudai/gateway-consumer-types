@@ -8,6 +8,12 @@ import {
   JobPayoutStatus
 } from './enums'
 
+export interface IMember {
+  member_id: string;
+  username: string;
+  profile_picture?: string;
+  name?: string;
+}
 interface Questions {
   [key: number]: string
 }
@@ -28,6 +34,7 @@ export type Opportunity = {
   description: string
   description_raw: string
   created_by: string
+  updated_by?: string
   visibility: Visibility
   status: JobStatus
   req_people_count: number
@@ -53,6 +60,43 @@ export type Opportunity = {
   created_at?: string
   updated_at?: string
 }
+
+export type OpportunityResponse = {
+    job_id: string
+    dao_id: string
+    type: JobType
+    title: string
+    description: string
+    description_raw: string
+    created_by: IMember
+    updated_by?: IMember
+    visibility: Visibility
+    status: JobStatus
+    req_people_count: number
+
+    start_date?: string
+    end_date?: string
+    payout?: JobPayout[]
+    project_id: string
+    task_id?: string
+    subtask_id?: string
+    github?: string
+    poc_member?: IMember
+    questions?: Questions
+    captain: boolean
+    department?: string
+
+    skills: string[]
+    tags: string[]
+    experience: number
+    open_to: OpportunityOpenTo[]
+    job_format: JobFormat
+
+    files: JobFileResponse[]
+
+    created_at?: string
+    updated_at?: string
+};
 
 export type Applicant = {
   applicant_id: string
@@ -90,6 +134,15 @@ export type JobFile = {
   updated_at?: string
 }
 
+export type JobFileResponse = {
+  job_file_id: string;
+  name: string;
+  url: string;
+  metadata?: Metadata;
+
+  created_at?: string;
+};
+
 //Bounty
 
 export type Bounty = {
@@ -104,8 +157,8 @@ export type Bounty = {
   visibility: Visibility
   status: JobStatus
 
-  task_id: string
-  subtask_id: string
+  task_id?: string
+  subtask_id?: string
   
   start_date?: string
   end_date?: string
@@ -122,6 +175,38 @@ export type Bounty = {
   created_at?: string
   updated_at?: string
 }
+
+export type BountyResponse = {
+  bounty_id: string
+  dao_id: string
+  project_id?: string
+  title: string
+  description?: string
+  description_raw?: string
+  winner_count: number
+  created_by: IMember
+  visibility: Visibility
+  status: JobStatus
+
+  task_id: string
+  subtask_id: string
+
+  start_date?: string
+  end_date?: string
+  payout?: JobPayout[]
+  req_people_count?: number
+  poc_member?: IMember
+
+  department?: string
+  tags?: string[]
+  skills?: string[]
+
+  updated_by?: IMember
+  files : BountyFileResponse[]
+
+  created_at?: string
+  updated_at?: string
+};
 
 export type Submission = {
   submission_id: string
@@ -159,6 +244,15 @@ export type BountyFile = {
   updated_at?: string
 }
 
+export type BountyFileResponse = {
+  bounty_file_id: string;
+  name: string;
+  url: string;
+  metadata?: Metadata;
+
+  created_at?: string;
+};
+
 export type FavouriteJob = {
   favourite_id: string
   job_id: string
@@ -172,6 +266,7 @@ export type JobPayout = {
   name: string
   link_type: string
   link_id: string
+  member_id?: string
   provider_id: string
   receiver_address?: string
   payout_amount: number
