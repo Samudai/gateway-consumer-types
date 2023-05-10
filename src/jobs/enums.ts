@@ -12,6 +12,7 @@ export enum JobStatus {
   OPEN = 'open',
   CLOSED = 'closed',
   DRAFT = 'draft',
+  ARCHIVED = 'archived'
 }
 
 export enum ApplicantType {
