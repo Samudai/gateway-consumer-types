@@ -111,8 +111,8 @@ export type Applicant = {
   answers: Answers;
   status: ApplicantStatusType;
   application: string;
-  member_details?: MemberResponse[] 
-  job_details?: OpportunityResponse[]
+  member_details?: MemberResponse
+  job_details?: OpportunityResponse
   updated_by?: string;
 
   created_at?: string;
@@ -230,8 +230,8 @@ export type Submission = {
   status: ApplicantStatusType
   rank: number
   feedback: string
-  member_details?: MemberResponse[] 
-  bounty_details?: BountyResponse[]
+  member_details?: MemberResponse
+  bounty_details?: BountyResponse
 
   created_at?: string
   updated_at?: string
