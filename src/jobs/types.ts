@@ -1,3 +1,4 @@
+import { MemberResponse } from '../members/types';
 import {
   ApplicantStatusType,
   JobFormat,
@@ -64,6 +65,7 @@ export type Opportunity = {
 export type OpportunityResponse = {
     job_id: string
     dao_id: string
+    dao_name: string
     type: JobType
     title: string
     description: string
@@ -78,8 +80,11 @@ export type OpportunityResponse = {
     end_date?: string
     payout?: JobPayout[]
     project_id: string
+    project_name: string
     task_id?: string
+    task_name: string
     subtask_id?: string
+    subtask_name: string
     github?: string
     poc_member?: IMember
     questions?: Questions
@@ -99,18 +104,20 @@ export type OpportunityResponse = {
 };
 
 export type Applicant = {
-  applicant_id: string
-  job_id: string
-  member_id: string
-  clan_id: string
-  answers: Answers
-  status: ApplicantStatusType
-  applicant: string
-  updated_by?: string
+  applicant_id: string;
+  job_id: string;
+  member_id: string;
+  clan_id: string;
+  answers: Answers;
+  status: ApplicantStatusType;
+  application: string;
+  member_details?: MemberResponse[] 
+  job_details?: OpportunityResponse[]
+  updated_by?: string;
 
-  created_at?: string
-  updated_at?: string
-}
+  created_at?: string;
+  updated_at?: string;
+};
 
 export type JobFilter = {
   dao_ids?: string[]
@@ -179,7 +186,9 @@ export type Bounty = {
 export type BountyResponse = {
   bounty_id: string
   dao_id: string
+  dao_name: string
   project_id?: string
+  project_name: string
   title: string
   description?: string
   description_raw?: string
@@ -189,12 +198,15 @@ export type BountyResponse = {
   status: JobStatus
 
   task_id: string
+  task_name: string
   subtask_id: string
+  subtask_name: string
 
   start_date?: string
   end_date?: string
   payout?: JobPayout[]
   req_people_count?: number
+  total_applicant_count: number
   poc_member?: IMember
 
   department?: string
@@ -218,6 +230,8 @@ export type Submission = {
   status: ApplicantStatusType
   rank: number
   feedback: string
+  member_details?: MemberResponse[] 
+  bounty_details?: BountyResponse[]
 
   created_at?: string
   updated_at?: string
