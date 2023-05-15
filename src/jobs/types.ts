@@ -254,12 +254,18 @@ export type BountyFileResponse = {
 };
 
 export type FavouriteJob = {
-  favourite_id: string
-  job_id: string
-  member_id: string
+    favourite_id: string;
+    job_id: string;
+    member_id: string;
+    created_at?: string;
+};
 
-  created_at?: string
-}
+export type FavouriteJobBounty = {
+    favourite_id: string;
+    member_id: string;
+    bounty_id: string;
+    created_at?: string;
+};
 
 export type JobPayout = {
   payout_id: string
