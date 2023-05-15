@@ -90,6 +90,7 @@ export type OpportunityResponse = {
     questions?: Questions
     captain: boolean
     department?: string
+    total_applicant_count: number
 
     skills: string[]
     tags: string[]
