@@ -41,6 +41,7 @@ export type DAOEvent = {
 
 export type MemberEvent = {
   member_id: string
+  dao_id: string
   event_type: MemberEventType
   event_context: MemberEventContext
 }

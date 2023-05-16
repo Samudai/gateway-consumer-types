@@ -46,6 +46,9 @@ export type MemberResponse = {
   tags?: string[]
   discord: MemberDiscord
   wallets: WalletView[]
+  dao_worked_profile_pictures?: string[]
+  dao_worked_count?: number;
+  dao_worked_with?: DaoWorked[];
   default_wallet_address: string
 
   invite_code?: string
@@ -79,6 +82,11 @@ export type Wallet = {
   wallet_address: string
   chain_id: string
   default: boolean
+}
+
+export type DaoWorked = {
+  name: string;
+  profile_picture: string;
 }
 
 export type Chain = {
