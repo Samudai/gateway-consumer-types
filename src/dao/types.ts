@@ -20,6 +20,7 @@ export type DAO = {
   updated_at?: string
   open_to_collaboration?: boolean
 	tags?: string[]
+  poc_member_id?: string
 }
 
 export type DAOMember = {
@@ -65,7 +66,9 @@ export type DAOView = {
 
   dao_type: DAOType
 
-  members: string[]
+  members?: IMember[]
+  members_profile_pictures?: string[]
+  members_count?: number
   roles: string[]
   socials: DAOSocial[] //Socials
   tokens: string[] //Tokens
@@ -74,6 +77,7 @@ export type DAOView = {
   updated_at?: string
   open_to_collaboration?: boolean
 	tags : string[]
+  poc_member?: IMember
 }
 
 export type DAOInvite = {
