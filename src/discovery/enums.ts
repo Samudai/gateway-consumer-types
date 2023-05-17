@@ -23,3 +23,8 @@ export enum MemberEventContext {
   TASK = 'task',
   VERIFY_CREDS = 'verify_creds',
 }
+
+export enum TagsType {
+  DAO = 'dao',
+  CONTRIBUTOR = 'contributor'
+}

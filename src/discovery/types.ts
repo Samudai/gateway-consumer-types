@@ -3,6 +3,7 @@ import {
   DAOEventType,
   MemberEventContext,
   MemberEventType,
+  TagsType
 } from './enums'
 
 export type DiscoverDAOResponse = {
@@ -44,4 +45,25 @@ export type MemberEvent = {
   dao_id: string
   event_type: MemberEventType
   event_context: MemberEventContext
+}
+
+export type NewView = { 
+    type : TagsType;
+    link_id : string;
+}
+
+export type MostActiveResponse = {
+    _id : string;
+    type : TagsType;
+    link_id : string;
+    count : number;
+    timestamp_property : string;
+}
+
+export type MostViewedResponse = {
+    _id : string;
+    type : TagsType;
+    link_id : string;
+    views : number;
+    date : string;
 }
