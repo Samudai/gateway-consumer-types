@@ -47,10 +47,11 @@ export type MemberResponse = {
   discord: MemberDiscord
   wallets: WalletView[]
   dao_worked_profile_pictures?: string[]
-  dao_worked_count?: number;
-  dao_worked_with?: DaoWorked[];
+  dao_worked_count?: number
+  dao_worked_with?: DaoWorked[]
   default_wallet_address: string
 
+  isconnection?: boolean
   invite_code?: string
   invite_count: number
 
