@@ -303,13 +303,13 @@ export type GuildInfo = {
     joined_at: string;
 };
 
-export type Review = {
-    id: string;
-    member_id: string;
-    reviewer_id: string;
-    content: string;
-    rating: number;
-};
+export type MemberReview = {
+  id: string
+  member_id: string
+  reviewer_id: string
+  content: string
+  rating: number
+}
 
 export type MemberReviewResponse = {
     id: string;
