@@ -45,7 +45,7 @@ export type MemberResponse = {
     about?: string;
     domain_tags_for_work: string[];
     currency: string;
-    hourly_rate: number;
+    hourly_rate: string;
     skills: string[];
     profile_picture?: string;
     socials?: MemberSocial[];
