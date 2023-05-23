@@ -1,4 +1,4 @@
-import { ClanRole, FetchMemberType, InviteStatus, RewardType } from './enums'
+import { ClanRole, FetchMemberType, InviteStatus, RewardType } from './enums';
 
 export interface MemberSocial {
     [key: string]: string;
@@ -47,8 +47,11 @@ export type MemberResponse = {
     currency: string;
     hourly_rate: string;
     skills: string[];
+    featured_projects?: FeaturedProjects[];
     profile_picture?: string;
     socials?: MemberSocial[];
+    invite?: InviteStatus;
+    message?: string;
     ceramic_stream?: string;
     subdomain?: string;
     tags?: string[];
@@ -69,6 +72,11 @@ export type MemberResponse = {
 
     created_at?: string;
     updated_at?: string;
+};
+
+export type FeaturedProjects = {
+    url: string;
+    about?: string;
 };
 
 export type MemberWorkProgress = {
@@ -154,6 +162,7 @@ export type ConnectionRequest = {
     sender_id: string;
     receiver_id: string;
     status: InviteStatus;
+    message?: string;
 
     created_at?: string;
     updated_at?: string;
@@ -165,6 +174,7 @@ export type Connection = {
     sender_id?: string;
     receiver_id?: string;
     status: InviteStatus;
+    message?: string;
 };
 
 //Clans
@@ -304,12 +314,12 @@ export type GuildInfo = {
 };
 
 export type MemberReview = {
-  id: string
-  member_id: string
-  reviewer_id: string
-  content: string
-  rating: number
-}
+    id: string;
+    member_id: string;
+    reviewer_id: string;
+    content: string;
+    rating: number;
+};
 
 export type MemberReviewResponse = {
     id: string;
