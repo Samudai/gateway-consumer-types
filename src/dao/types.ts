@@ -78,7 +78,7 @@ export type DAOView = {
   open_to_collaboration?: boolean
 	tags : string[]
   poc_member?: IMember
-  ismember?: boolean
+  ismember?: string
 }
 
 export type DAOInvite = {
