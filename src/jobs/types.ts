@@ -296,4 +296,6 @@ export type JobPayout = {
   completed: boolean
   provider_exists?: boolean
   status: JobPayoutStatus
+  created_at?: string
+  updated_at?: string
 }
