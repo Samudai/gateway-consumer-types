@@ -80,8 +80,8 @@ export type FeaturedProjects = {
 };
 
 export type MemberWorkProgress = {
-    overdue_tasks: number;
-    ongoing_tasks: number;
+    overdue_tasks_count: number;
+    ongoing_tasks_count: number;
     total_tasks_taken: number;
     pending_admin_reviews: number;
     dao_worked_with: DaoWorked[];
