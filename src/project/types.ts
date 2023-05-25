@@ -256,6 +256,10 @@ export type ProjectResponse = {
 export type TaskResponse = {
     task_id?: string;
     project_id: string;
+    project_name?: string;
+    columns?: ProjectColumn[];
+    dao_id?: string;
+    dao_name?: string;
     title: string;
     description?: string;
     description_raw?: string;
