@@ -84,6 +84,7 @@ export type MemberWorkProgress = {
     ongoing_tasks: number;
     total_tasks_taken: number;
     pending_admin_reviews: number;
+    dao_worked_with: DaoWorked[];
 };
 
 // MemberDiscord
