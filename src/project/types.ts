@@ -125,6 +125,8 @@ export type Payout = {
     token_address?: string;
     completed: boolean;
     provider_exists?: boolean;
+    created_at?: string;
+    updated_at?: string;
 };
 
 export type TaskFile = {

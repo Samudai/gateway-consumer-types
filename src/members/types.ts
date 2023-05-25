@@ -66,7 +66,7 @@ export type MemberResponse = {
     total_tasks_taken: number;
     pending_admin_reviews: number;
 
-    isconnection?: boolean;
+    isconnection?: string;
     invite_code?: string;
     invite_count: number;
 
