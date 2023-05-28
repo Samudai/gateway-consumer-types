@@ -53,3 +53,18 @@ export enum ActionType {
   VIEW_RENAMED = 'viewRenamed',
   VIEW_DELETED = 'viewDeleted',
 }
+
+export enum DAOItems { 
+  COMPLETE_PROFILE = 'complete_profile',
+  EXPLORE_DASHBOARD = 'explore_dashboard',
+  INVITE_MEMBERS = 'invite_members',
+  START_NEW_PROJECT = 'start_new_project',
+  POST_A_JOB = 'post_a_job'
+}
+
+export enum ContributorItems { 
+  COMPLETE_PROFILE = 'complete_profile',
+  INVITE_MEMBERS = 'invite_members',
+  CONNECT_WITH_CONTRIBUTORS = 'connect_with_contributors',
+  APPLY_FOR_JOB = 'apply_for_job'
+}

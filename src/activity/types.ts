@@ -37,3 +37,9 @@ export type Activity = {
   }
   timestamp_property: any
 }
+
+export type Feedback = {
+  member_id: string
+  type_of_member: string
+  feedback: string
+}
