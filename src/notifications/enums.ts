@@ -1,7 +1,9 @@
 export enum NotificationType {
-  Actionable = 0,
-  Alert = 1,
-  Information = 2,
+  HEADS_UP = 0,
+  ACT_FAST = 1,
+  RECOGNITION = 2,
+  TRACTION = 3,
+  KUDOS = 4,
 }
 
 export enum NotificationStatus {
@@ -19,12 +21,18 @@ export enum NotificationFor {
   MEMBER = 0,
   ADMIN = 1,
   CAPTAIN = 2,
+  ADMIN_MEMBER = 3
 }
 
 export enum NotificationScope {
-  PAYMENT = 0,
-  REVIEWS = 1,
+  HEADS_UP = 0,
+  ACT_FAST = 1,
+  RECOGNITION = 2,
+  TRACTION = 3,
+  KUDOS = 4,
 }
+
+
 
 export enum SocketEventsToService {
   'CONNECTION' = 'connection',
@@ -46,8 +54,88 @@ export enum SocketEventsToService {
   'DISCONNECT' = 'disconnect',
 }
 
+export enum SocketEventsToServiceChat {
+  'CHAT_REQUESTED_NOTIFICATION' = 'chat_requested_notification',
+  'CHAT_REQUEST_ACCEPT_NOTIFICATION' = 'chat_request_accepted_notification',
+  'MESSAGE_RECIEVED_NOTIFICATION' = 'message_recieved_notification'
+}
+
+export enum SocketEventsToServiceDiscovery {
+  'PROFILE_VIEW_NOTIFICATION' = 'profile_view_notifications'
+}
+
+export enum SocketEventsToServiceForum {
+  'DISCUSSION_CREATED' = 'discussion_created',
+  'INVITED_TO_DISCUSSION' = 'invited_to_discussion',
+  'NEW_PROPOSAL_DISCUSSION' = 'new_proposal_discussion',
+  'ADDED_TO_DISCUSSION' = 'added_to_discussion',
+  'MEMBER_JOINED' = 'member_joined',
+  'MEMBER_LEFT' = 'member_left',
+  'COMMENT_ADDED_ON_DISCUSSION' = 'comment_added_on_discussion',
+  'MOST_LIKED_COMMENT' = 'most_liked_comment',
+  'MOST_VIEWED_DISCUSSION' = 'most_viewed_discussion',
+  'MOST_ACTIVE_PARTICIPANT' = 'most_active_participant',
+  'MOST_ACTIVE_PARTICANT_TO_CREATOR' = 'most_active_participant_to_creator',
+  'COLLECTED_COMMENTS_NOTIFICATION' = 'collected_comments_notification',
+  'DISCUSSION_CLOSED' = 'discussion_closed'
+}
+
+export enum SocketEventsToServiceJob {
+  'JOB_APPLICANT_SUBMITTED' = 'job_applicant_submitted',
+  'BOUNTY_SUBMITTED' = 'bounty_submission',
+  'JOB_APPLICANT_ACCEPTED' = 'job_applicant_accepted',
+  'BOUNTY_REWARDED' = 'bounty_rewarded',
+  'JOB_APPLICANT_REJECTED' = 'job_applicant_rejected',
+  'BOUNTY_SUBMISSION_REJECTED' = 'bounty_submission_rejected'
+}
+
+export enum SocketEventsToServicePayment {
+  'PAYMENT_CREATED_NOTIFICATION' = 'payment_created_notification',
+  'CONTRIBUTOR_PAYMENT_RECEIVED' = 'contributor_payment_received',
+  'PAYMENT_COMPLETED_NOTIFICATION' = 'payment_completed_notification',
+  'PROVIDER_ADDED' = 'provider_added',
+  'DEFAULT_PROVIDER_CHANGED' = 'default_provider_changed',
+  'FIRST_SIGNING_PAYMENT' = 'first_signing_payment',
+  'SIGNING_PAYMENT' = 'signing_payment',
+  'EXECUTE_PAYMENT' = 'execute_payment'
+}
+
+export enum SocketEventsToServiceProject {
+  'ADDED_TO_PROJECT' = 'added_to_project',
+  'ADDED_TO_TASK' = 'added_to_task',
+  'TASK_REVIEW' = 'task_review',
+  'TASK_STATUS_CHANGED' = 'task_status_changed',
+  'TASK_CREATED' = 'task_created',
+  'TASK_DELETED' = 'task_deleted',
+  'TASK_POSTED_AS_JOB_OR_BOUNTY' = 'task_posted_as_job_or_bounty',
+  'PAYOUT_ASSIGNED_CONTRIBUTOR' = 'payout_assigned_contributor',
+  'PAYOUT_ASSIGNED_DAO' = 'payout_assigned_dao',
+  'TASK_STATUS_TO_COMPLETE' = 'task_status_to_completed',
+  'COMMENT_TASK_ON_NOTIFICATION' = 'comment_on_task_notification',
+  'ATTACHMENT_ADDED_TO_TASK' = 'attachment_added_to_task',
+  'TASK_ASSIGNED_TO_CONTRIBUTOR' = 'task_assigned_to_contributor',
+  'CONTRIBUTOR_REMOVED_FROM_TASK_CONTRIBUTOR' = 'contributor_removed_from_task_contributor',
+  'CONTRIBUTOR_REMOVED_FROM_TASK_DAO' = 'contributor_removed_from_task_dao',
+  'EDIT_IN_TASK' = 'edit_in_task',
+  'REVIEW_NUDGE_CONTRIBUTOR' = 'review_nudge_contributor',
+  'REVIEW_NUDGE_DAO' = 'review_nudge_dao',
+}
+
+export enum SocketEventsToServiceContributorProfile {
+  'SOCIAL_CONNECTION' = 'social_connection',
+  'CONTRIBUTOR_COMPLETE_PROFILE' = 'contributor_complete_profile',
+}
+
+export enum SocketEventsToServiceDaoProfile {
+  'COLLABORATION_REQUEST' = 'collaboration_request',
+  'COMPLETE_PROFILE' = 'complete_profile'
+}
+
 export enum SocketEventsFromService {
   'MEMBER_CONNECTED' = 'memberConnected',
-  'PAYMENT_NOTIFICATION' = 'payment_notification',
-  'REVIEW_NOTIFICATION' = 'review_notification',
+  'HEADS_UP' = 'heads_up',
+  'ACT_FAST' = 'act_fast',
+  'RECOGNITION' = 'recognition',
+  'TRACTION' = 'traction',
+  'KUDOS' = 'kudos'
 }

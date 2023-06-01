@@ -27,6 +27,7 @@ export type WebNotification = {
 
 export type NotificationContent = {
   type: NotificationType
+  tags: string[]
   notificationHeader: string
   notificationBody: string
   metaData?: any
