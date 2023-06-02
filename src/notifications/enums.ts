@@ -1,9 +1,8 @@
 export enum NotificationType {
   HEADS_UP = 0,
   ACT_FAST = 1,
-  RECOGNITION = 2,
-  TRACTION = 3,
-  KUDOS = 4,
+  TRACTION = 2,
+  KUDOS = 3,
 }
 
 export enum NotificationStatus {
@@ -27,31 +26,19 @@ export enum NotificationFor {
 export enum NotificationScope {
   HEADS_UP = 0,
   ACT_FAST = 1,
-  RECOGNITION = 2,
-  TRACTION = 3,
-  KUDOS = 4,
+  TRACTION = 2,
+  KUDOS = 3,
 }
-
-
 
 export enum SocketEventsToService {
   'CONNECTION' = 'connection',
-  'PAYMENT_CREATED_NOTIFICATION' = 'payment_created_notification',
-  'CONTRIBUTOR_PAYMENT_RECEIVED' = 'contributor_payment_received',
-  'PAYMENT_COMPLETED_NOTIFICATION' = 'payment_completed_notification',
-  'JOB_APPLICANT_SUBMITTED' = 'job_applicant_submitted',
-  'BOUNTY_SUBMISSION' = 'bounty_submission',
-  'TASK_REVIEW' = 'task_review',
-  'ADDED_TO_PROJECT' = 'added_to_project',
-  'ADDED_TO_TASK' = 'added_to_task',
-  'MEETING_CREATED' = 'meeting_created',
-  'SOCIAL_CONNECTION' = 'social_connection',
-  'COLLLABORATION_REQUEST' = 'collaboration_request',
-  'DEAL_FORM_RESPONSE' = 'deal_form_response',
-  'DISCUSSION_CREATED' = 'discussion_created',
-  'INVITED_TO_DISCUSSION' = 'invited_to_discussion',
-  'GENERAL_NOTIFICATION' = 'general_notification',
   'DISCONNECT' = 'disconnect',
+}
+
+export enum SocketEventsToServiceGeneral { 
+  'DEAL_FORM_RESPONSE' = 'deal_form_response',
+  'GENERAL_NOTIFICATION' = 'general_notification',
+  'MEETING_CREATED' = 'meeting_created',
 }
 
 export enum SocketEventsToServiceChat {
@@ -135,7 +122,6 @@ export enum SocketEventsFromService {
   'MEMBER_CONNECTED' = 'memberConnected',
   'HEADS_UP' = 'heads_up',
   'ACT_FAST' = 'act_fast',
-  'RECOGNITION' = 'recognition',
   'TRACTION' = 'traction',
   'KUDOS' = 'kudos'
 }
