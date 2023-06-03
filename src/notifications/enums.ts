@@ -77,6 +77,8 @@ export enum SocketEventsToServiceJob {
 }
 
 export enum SocketEventsToServicePayment {
+  'JOB_POSTED_NOTIFICATION' = 'job_posted_notification',
+  'BOUNTY_POSTED_NOTIFICATION' = 'bounty_posted_notification',
   'PAYMENT_CREATED_NOTIFICATION' = 'payment_created_notification',
   'CONTRIBUTOR_PAYMENT_RECEIVED' = 'contributor_payment_received',
   'PAYMENT_COMPLETED_NOTIFICATION' = 'payment_completed_notification',
@@ -109,7 +111,8 @@ export enum SocketEventsToServiceProject {
 }
 
 export enum SocketEventsToServiceContributorProfile {
-  'SOCIAL_CONNECTION' = 'social_connection',
+  'SOCIAL_CONNECTION_REQUEST' = 'social_connection_request',
+  'CONNECTION_ACCEPTED_REQUEST' = 'connection_accepted_request',
   'CONTRIBUTOR_COMPLETE_PROFILE' = 'contributor_complete_profile',
 }
 
