@@ -48,7 +48,7 @@ export type NotificationPartialData = {
   }
   from: {
     from: string
-    origin: string
+    origin?: string
     by: NotificationCreatedby
   }
   metaData?: {
@@ -71,7 +71,7 @@ export type TaskReviewNotificationMetaData = {
     username: string;
     member_id: string;
   };
-  project: string;
+  project?: string;
   redirect_link?: string;
 };
 
@@ -227,6 +227,28 @@ export type DefaultProviderChangedNotificationMetaData = {
 }
 
 // job
+export type postingJobNotificationMetaData = {
+  member: IMember;
+  job: { 
+    job_id : string,
+    title : string,
+    dao_id : string,
+    dao_name : string
+  }
+  redirect_link?: string;
+}
+
+export type postingBountyNotificationMetaData = {
+  member: IMember;
+  bounty: { 
+    bounty_id : string,
+    title : string,
+    dao_id : string,
+    dao_name : string
+  }
+  redirect_link?: string;
+}
+
 export type JobApplicantNotificationMetaData = {
   member: IMember;
   applicant: {
@@ -244,7 +266,6 @@ export type JobApplicantNotificationMetaData = {
 export type BountySubmissionNotificationMetaData = {
   member: IMember;
   bounty: {
-    title: string;
     bounty_id: string;
     submission_id: string;
   };
@@ -374,7 +395,7 @@ export type GenenralNotificationMetaData = {
 export type MeetingCreatedNotificationMetaData = {
   member: IMember;
   meeting: {
-    title: string;
+    title?: string;
     location: string;
     meeting_id: string;
     date: string;
@@ -391,7 +412,7 @@ export type DealFormResponseNotificationMetaData = {
   member: IMember;
   response: {
     project_id: string;
-    title: string;
+    title?: string;
     form_id: string;
     added_by: string;
   };
