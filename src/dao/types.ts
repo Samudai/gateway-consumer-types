@@ -21,6 +21,7 @@ export type DAO = {
   open_to_collaboration?: boolean
 	tags?: string[]
   poc_member_id?: string
+  join_dao_link?: string
 }
 
 export type DAOMember = {
@@ -79,6 +80,7 @@ export type DAOView = {
 	tags : string[]
   poc_member?: IMember
   ismember?: string
+  join_dao_link?: string
 }
 
 export type DAOInvite = {
