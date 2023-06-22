@@ -291,11 +291,21 @@ export type JobPayout = {
   provider_id: string
   receiver_address?: string
   payout_amount: number
-  payout_currency: string
+  payout_currency: PayoutCurrency 
   token_address?: string
   completed: boolean
   provider_exists?: boolean
   status: JobPayoutStatus
   created_at?: string
   updated_at?: string
+}
+
+export type PayoutCurrency = {
+  currency: string;
+  symbol?: string;
+  balance: string;
+  token_address: string;
+  name: string;
+  decimal: number;
+  logo_uri: string;
 }
