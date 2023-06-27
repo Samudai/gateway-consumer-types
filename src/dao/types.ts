@@ -227,8 +227,19 @@ export type DataPoint = {
   value: number
 }
 
+export type TMember = {
+  member_id: string
+  username: string
+  profile_picture?: string
+  name?: string
+  present_role?: string
+  created_at?: string
+}
+
 export type TeamMemberResponse = {
-  member: IMember
+  member: TMember
+  open_task : number
+  closed_task : number
   projects: ProjectResponse[]
   role: DAORole[]
   last_activity: any
@@ -247,7 +258,7 @@ export type TeamMember = {
   access?: string
 
   task_count: number
-
+  skills: string[]
   member_joined?: string
 }
 
