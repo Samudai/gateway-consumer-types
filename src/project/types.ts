@@ -1,4 +1,5 @@
 //import { Provider } from '../../paymentController/utils/types'
+import { PayoutCurrency } from '../jobs/types';
 import { Provider } from '../payment/types'
 import {
   ApplicantType,
@@ -121,7 +122,7 @@ export type Payout = {
     provider_id: string;
     receiver_address?: string;
     payout_amount: number;
-    payout_currency: string;
+    payout_currency: PayoutCurrency;
     token_address?: string;
     completed: boolean;
     provider_exists?: boolean;
