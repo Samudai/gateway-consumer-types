@@ -19,7 +19,7 @@ export type DAO = {
   created_at?: string
   updated_at?: string
   open_to_collaboration?: boolean
-	tags?: string[]
+  tags?: string[]
   poc_member_id?: string
   join_dao_link?: string
 }
@@ -77,7 +77,7 @@ export type DAOView = {
   created_at?: string
   updated_at?: string
   open_to_collaboration?: boolean
-	tags : string[]
+  tags: string[]
   poc_member?: IMember
   ismember?: string
   join_dao_link?: string
@@ -116,7 +116,7 @@ export type MemberDAOView = {
   dao_updated?: string
   member_joined?: string
   open_to_collaboration?: boolean
-	tags : string[]
+  tags: string[]
 }
 
 export type DAOSocial = {
@@ -238,8 +238,8 @@ export type TMember = {
 
 export type TeamMemberResponse = {
   member: TMember
-  open_task : number
-  closed_task : number
+  open_task: number
+  closed_task: number
   projects: ProjectResponse[]
   role: DAORole[]
   last_activity: any
@@ -271,4 +271,11 @@ export type FavouriteDAOResponse = {
 
   name: string
   profile_picture?: string
+}
+
+export type SubdomainInfo = {
+  dao_id: string
+  subdomain_claimed: string
+  provider_address: string
+  approved: boolean
 }
