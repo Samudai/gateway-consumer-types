@@ -57,6 +57,7 @@ export type Opportunity = {
   experience: number
   open_to: OpportunityOpenTo[]
   job_format: JobFormat
+  transaction_count : number
 
   created_at?: string
   updated_at?: string
@@ -97,6 +98,8 @@ export type OpportunityResponse = {
     experience: number
     open_to: OpportunityOpenTo[]
     job_format: JobFormat
+    transaction_count : number
+    accepted_applicants : number
 
     files: JobFileResponse[]
 
@@ -298,6 +301,7 @@ export type JobPayout = {
   status: JobPayoutStatus
   created_at?: string
   updated_at?: string
+  rank? : number
 }
 
 export type PayoutCurrency = {
