@@ -87,7 +87,8 @@ export enum SocketEventsToServicePayment {
   'DEFAULT_PROVIDER_CHANGED' = 'default_provider_changed',
   'FIRST_SIGNING_PAYMENT' = 'first_signing_payment',
   'SIGNING_PAYMENT' = 'signing_payment',
-  'EXECUTE_PAYMENT' = 'execute_payment'
+  'EXECUTE_PAYMENT' = 'execute_payment',
+  'INITIATE_PAYMENT' = 'initiate_payment'
 }
 
 export enum SocketEventsToServiceProject {
