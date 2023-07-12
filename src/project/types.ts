@@ -8,6 +8,7 @@ import {
   ProjectType,
   ResponseType,
   Visibility,
+  TaskCreatedSource
 } from './enums'
 
 interface Metadata {
@@ -97,6 +98,7 @@ export type Task = {
     archived?: boolean;
     associated_job_type?: string;
     associated_job_id?: string;
+    source? : TaskCreatedSource;
     //Formresponse optional fields
     response_id?: string;
     response_type?: ResponseType;
@@ -283,6 +285,7 @@ export type TaskResponse = {
     archived?: boolean;
     associated_job_type?: string;
     associated_job_id?: string;
+    source? : TaskCreatedSource;
     completed_subtask_count?: number;
 
     vc_claim?: string[];

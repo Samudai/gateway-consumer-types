@@ -36,3 +36,8 @@ export enum ApplicantType {
 export enum ResponseType {
   DEAL = 'deal',
 }
+
+export enum TaskCreatedSource {
+  PROJECT = 'project',
+  JOB = 'job'
+}
