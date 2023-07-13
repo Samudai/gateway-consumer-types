@@ -117,6 +117,7 @@ export enum SocketEventsToServiceContributorProfile {
   'SOCIAL_CONNECTION_REQUEST' = 'social_connection_request',
   'CONNECTION_ACCEPTED_REQUEST' = 'connection_accepted_request',
   'CONTRIBUTOR_COMPLETE_PROFILE' = 'contributor_complete_profile',
+  'CONTRIBUTOR_COMPlETE_PROFILE_TO_APPLY_JOB' = 'contributor_complete_profile_to_apply_job'
 }
 
 export enum SocketEventsToServiceDaoProfile {
