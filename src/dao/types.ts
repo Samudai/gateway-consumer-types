@@ -165,6 +165,14 @@ export type Collaboration = {
   updated_at?: string
 }
 
+export type CollaborationPass = {
+  collaboration_pass_id : string
+  dao_id : string
+  claimed : boolean
+  created_at? : string
+  updated_at? : string
+}
+
 export type Token = {
   id: number
   dao_id: string
