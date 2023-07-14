@@ -59,12 +59,14 @@ export enum DAOItems {
   EXPLORE_DASHBOARD = 'explore_dashboard',
   INVITE_MEMBERS = 'invite_members',
   START_NEW_PROJECT = 'start_new_project',
-  POST_A_JOB = 'post_a_job'
+  POST_A_JOB = 'post_a_job',
+  COLLABORATION_PASS_CLAIM = 'collaboration_pass_claim'
 }
 
 export enum ContributorItems { 
   COMPLETE_PROFILE = 'complete_profile',
   INVITE_MEMBERS = 'invite_members',
   CONNECT_WITH_CONTRIBUTORS = 'connect_with_contributors',
-  APPLY_FOR_JOB = 'apply_for_job'
+  APPLY_FOR_JOB = 'apply_for_job',
+  NFT_CLAIM = 'nft_claim'
 }
