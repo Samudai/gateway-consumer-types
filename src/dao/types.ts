@@ -81,6 +81,12 @@ export type DAOView = {
   poc_member?: IMember
   ismember?: string
   join_dao_link?: string
+  collaboration_pass : DaoCollaborationPass
+}
+
+export type DaoCollaborationPass = {
+  collaboration_pass_id : string;
+  claimed : boolean;
 }
 
 export type DAOInvite = {
