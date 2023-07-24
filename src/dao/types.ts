@@ -1,9 +1,9 @@
 import { IMember, ProjectResponse } from '../project/types'
 import { DAOType, InviteStatus } from './enums'
 
-interface Requirements {
-  [key: string]: string
-}
+// interface Requirements {
+//   [key: string]: string
+// }
 
 export type DAO = {
   dao_id: string
@@ -85,8 +85,8 @@ export type DAOView = {
 }
 
 export type DaoCollaborationPass = {
-  collaboration_pass_id : string;
-  claimed : boolean;
+  collaboration_pass_id : string
+  claimed : boolean
 }
 
 export type DAOInvite = {
@@ -161,7 +161,7 @@ export type Collaboration = {
   title: string
   department: string
   description: string
-  requirements?: Requirements
+  requirements?: string[]
   benefits: string
   attachment: string
 
