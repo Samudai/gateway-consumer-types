@@ -186,7 +186,7 @@ export type CollaborationResponse = {
   attachment: string
   scope: string
 
-  replying_member: string
+  replying_member: IMember
 
   created_at?: string
   updated_at?: string
