@@ -159,13 +159,34 @@ export type Collaboration = {
   to_dao_id: string
   status: string
   title: string
-  department: string
+  department?: string
   description: string
   requirements?: string[]
   benefits: string
   attachment: string
+  scope: string
 
   replying_member_id: string
+
+  created_at?: string
+  updated_at?: string
+}
+
+export type CollaborationResponse = {
+  collaboration_id: string
+  applying_member: IMember
+  from_dao_id: string
+  to_dao_id: string
+  status: string
+  title: string
+  department?: string
+  description: string
+  requirements?: string[]
+  benefits: string
+  attachment: string
+  scope: string
+
+  replying_member: IMember
 
   created_at?: string
   updated_at?: string
