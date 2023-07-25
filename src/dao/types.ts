@@ -82,11 +82,19 @@ export type DAOView = {
   ismember?: string
   join_dao_link?: string
   collaboration_pass : DaoCollaborationPass
+  collaborations: Collaborations
 }
 
 export type DaoCollaborationPass = {
   collaboration_pass_id : string
   claimed : boolean
+}
+
+export type Collaborations = {
+  collaboration_id : string
+  dao_id : string
+  name : string
+  profile_picture : string
 }
 
 export type DAOInvite = {
