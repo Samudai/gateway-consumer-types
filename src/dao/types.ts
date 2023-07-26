@@ -82,7 +82,7 @@ export type DAOView = {
   ismember?: string
   join_dao_link?: string
   collaboration_pass : DaoCollaborationPass
-  collaborations: Collaborations
+  collaborations: Collaborations[]
 }
 
 export type DaoCollaborationPass = {
