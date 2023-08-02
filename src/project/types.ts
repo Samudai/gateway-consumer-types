@@ -192,6 +192,7 @@ export type Comment = {
 export type TaskAssign = {
     type: string;
     task_id: string;
+    project_id: string;
     assignee_member?: string[];
     assignee_clan?: string[];
     updated_by: string;
