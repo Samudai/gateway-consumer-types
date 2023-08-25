@@ -12,6 +12,11 @@ export type Dashboard = {
   updated_at?: string
 }
 
+export type DashboardName = {
+  dashboard_name: string;
+  dashboard_id: string;
+};
+
 export type DashboardWidget = {
   dashboard_widget_id: number
   dashboard_id: string

@@ -5,4 +5,6 @@ export enum PluginType {
   GCAL = 'gcal',
   NOTION = 'notion',
   TWITTER = 'twitter',
+  GITHUB = 'github',
+  GITHUBAPP = 'githubapp',
 }

@@ -1,4 +1,5 @@
 import { MemberResponse } from '../members/types';
+import { IMember } from '../project/types';
 import {
   ApplicantStatusType,
   JobFormat,
@@ -9,12 +10,6 @@ import {
   JobPayoutStatus
 } from './enums'
 
-export interface IMember {
-  member_id: string;
-  username: string;
-  profile_picture?: string;
-  name?: string;
-}
 interface Questions {
   [key: number]: string
 }
