@@ -1,39 +1,39 @@
+import { PayoutCurrency } from '../jobs/types'
+import { IMember } from '../project/types';
 import { PaymentStatus, ProviderType } from './enums'
 
-export interface IMember {
-  member_id: string
-  username: string
-  profile_picture?: string
-  name?: string
-}
-
 export type Payment = {
-  dao_id: string
-  payment_id: string
-  sender: string
-  receiver: string
+  dao_id: string;
+  payment_id: string;
+  sender: string;
+  receiver: string;
   value: [
-    {
-      amount: string
-      currency: string
-      contract_address: string
-    }
-  ]
-  task_id: string
-  transaction_hash: string
-  initiated_at: string
-  completed_at: string
-  payment_type: string
-  created_by: string
-  status: string
-  chain_id: number
-  updated_by: string
+      {
+          amount: string;
+          currency: PayoutCurrency;
+          contract_address: string;
+      }
+  ];
+  task_id: string;
+  job_id?: string;
+  bounty_id?: string;
+  safe_transaction_hash: string;
+  initiated_at: string;
+  completed_at: string;
+  payment_type: string;
+  created_by: string;
+  status: string;
+  chain_id: number;
+  payout_id?: string;
+  link_type? : string;
+  type?: string;
+  updated_by: string;
 
-  approver?: IMember
+  approver?: IMember;
 
-  created_at: string
-  updated_at: string
-}
+  created_at: string;
+  updated_at: string;
+};
 
 // export type Payment = {
 //     id?: number;

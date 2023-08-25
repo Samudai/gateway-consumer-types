@@ -34,6 +34,14 @@ export type DiscoverMemberResponse = {
   tasks_completed?: number
 }
 
+export type UniversalSearchResponse = {
+  id: string;
+  name: string;
+  profile_picture: string;
+  username?: string;
+  type: string;
+};
+
 export type DAOEvent = {
   dao_id: string
   event_type: DAOEventType

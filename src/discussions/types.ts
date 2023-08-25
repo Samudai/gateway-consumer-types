@@ -24,12 +24,12 @@ export type Discussion = {
 }
 
 export type Participant = {
-  id: string
-  discussion_id: string
-  member_id: string
+  id: number;
+  discussion_id: string;
+  member_id: string;
 
-  created_at?: string
-}
+  created_at?: string;
+};
 
 export type Message = {
   message_id: string

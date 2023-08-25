@@ -1,3 +1,4 @@
+import { IMember } from '../project/types'
 import {
   NotificationCreatedby,
   NotificationFor,
@@ -32,13 +33,6 @@ export type NotificationContent = {
   notificationHeader: string
   notificationBody: string
   metaData?: any
-}
-
-export type IMember = {
-  member_id: string
-  username: string
-  profile_picture: string
-  name: string
 }
 
 export type NotificationPartialData = {

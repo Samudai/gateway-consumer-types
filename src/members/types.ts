@@ -4,6 +4,11 @@ export interface MemberSocial {
     [key: string]: string;
 }
 
+export type CreateWaitlistEntry = {
+    email: string;
+};
+
+
 // Member
 export type Member = {
     member_id: string;
@@ -67,7 +72,7 @@ export type MemberResponse = {
     pending_admin_reviews: number;
     closed_task: number;
 
-    isconnection?: string;
+    isconnection?: boolean;
     invite_code?: string;
     invite_count: number;
 

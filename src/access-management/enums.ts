@@ -8,3 +8,11 @@ export enum AccessType {
   MANAGE_JOB = 'manage_job',
   MANAGE_FORUM = 'manage_forum',
 }
+
+export enum ProjectAccessType {
+  HIDDEN = 'hidden',
+  VIEW = 'view',
+  CREATE_TASK = 'create_task',
+  MANAGE_PROJECT = 'manage_project',
+  MANAGE_DAO = 'manage_dao',
+}

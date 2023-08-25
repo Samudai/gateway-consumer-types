@@ -1,14 +1,16 @@
 import { FormType, QuestionType } from './enums'
 
 export type Form = {
-  form_id: string
-  dao_id: string
-  type: FormType
-  questions: Question[]
+  form_id: string;
+  dao_id: string;
+  type: FormType;
+  questions: Question[];
+  created_by: string;
+  updated_by?: string;
 
-  created_at?: string
-  updated_at?: string
-}
+  created_at?: string;
+  updated_at?: string;
+};
 
 export type Question = {
   question: string
