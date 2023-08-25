@@ -165,7 +165,7 @@ export type MemberFilter = {
 
 //Connections
 export type ConnectionRequest = {
-    id: string;
+    id?: string;
     sender_id: string;
     receiver_id: string;
     status: InviteStatus;
@@ -314,10 +314,42 @@ export type MapDiscordParams = {
     guild_info: GuildInfo[];
 };
 
+export type Guilds = {
+    id: string;
+    name: string;
+    icon: string | null;
+    owner: boolean;
+    permissions: number;
+    features: string[];
+    permissions_new: string;
+};
+
+export type GuildStatus = {
+    id: string;
+    name: string;
+    dao_id?: string;
+    isOnboarded: boolean;
+    onboardingIntegration?: any;
+    onboardingData?: any;
+    goTo?: {
+        step: number;
+        name: string;
+    };
+};
+
+export type MemberGuilds = {
+    [key: string]: GuildStatus;
+};
+
 export type GuildInfo = {
     guild_id: string;
     discord_roles: string[];
     joined_at: string;
+};
+
+export type GuildInfoResponse = {
+    label: string;
+    value: string;
 };
 
 export type MemberReview = {

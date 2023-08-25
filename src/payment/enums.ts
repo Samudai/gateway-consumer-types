@@ -9,3 +9,8 @@ export enum PaymentStatus {
   PAID = 'paid',
   FAILED = 'failed',
 }
+
+export enum WalletType {
+  ETH = 0,
+  SOL = 1,
+}

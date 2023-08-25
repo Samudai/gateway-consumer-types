@@ -12,6 +12,16 @@ export type ProjectAccess = {
   updated_at?: string
 }
 
+export type ProjAccessResponse = {
+  access: {
+      manage_dao: boolean;
+      view: boolean;
+      create_task: boolean;
+      manage_project: boolean;
+  };
+  accessLevel: string;
+};
+
 export type ProjectAccessResponse = {
   id?: string;
   project_id: string;
@@ -46,8 +56,13 @@ export type DAOAccessResponse = {
 };
 
 export type AccessResponse = {
-  manage_dao: boolean
-  view: boolean
-  create_task: boolean
-  manage_project: boolean
-}
+  access: {
+      manage_dao: boolean;
+      view: boolean;
+      manage_project: boolean;
+      manage_payment: boolean;
+      manage_job: boolean;
+      manage_forum: boolean;
+  };
+  accessLevel: string;
+};
