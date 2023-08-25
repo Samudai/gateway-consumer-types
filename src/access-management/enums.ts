@@ -1,7 +1,6 @@
 export enum AccessType {
   HIDDEN = 'hidden',
   VIEW = 'view',
-  CREATE_TASK = 'create_task',
   MANAGE_PROJECT = 'manage_project',
   MANAGE_DAO = 'manage_dao',
   MANAGE_PAYMENT = 'manage_payment',
@@ -15,4 +14,15 @@ export enum ProjectAccessType {
   CREATE_TASK = 'create_task',
   MANAGE_PROJECT = 'manage_project',
   MANAGE_DAO = 'manage_dao',
+}
+
+export enum AccessLevels {
+  hidden = 0,
+  view = 1,
+  create_task = 2,
+  manage_payment = 3,
+  manage_job = 3,
+  manage_forum = 3,
+  manage_project = 3,
+  manage_dao = 4,
 }
