@@ -48,7 +48,6 @@ export enum ActionType {
   CONNECTION_SENT = 'connectionSent',
   CONNECTION_ACCEPTED = 'connectionAccepted',
   CONNECTION_REJECTED = 'connectionRejected',
-  // todo: correct spelling in next release
   VIEW_CREATED = 'viewCreated',
   VIEW_RENAMED = 'viewRenamed',
   VIEW_DELETED = 'viewDeleted',

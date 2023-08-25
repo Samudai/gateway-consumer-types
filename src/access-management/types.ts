@@ -4,7 +4,7 @@ import { AccessType, ProjectAccessType } from './enums'
 export type ProjectAccess = {
   id?: string
   project_id: string
-  access: AccessType
+  access: ProjectAccessType
   members: string[]
   roles: string[]
   invite_link: string
