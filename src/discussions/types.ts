@@ -41,6 +41,8 @@ export type Message = {
   sender_id: string
   attachment_link?: string
   metadata?: any
+  edited?: boolean
+  parent_id?: string
 
   created_at?: string
   updated_at?: string
@@ -57,10 +59,25 @@ export type MessageResponse = {
   metadata?: any
 
   sender?: IMember
+  edited?: boolean
+  parent_message?: ParentMessage
 
   created_at?: string
   updated_at?: string
 }
+
+export type ParentMessage = {
+  message_id: string
+  discussion_id: string
+  type: MessageType
+
+  content?: string
+  sender: IMember
+  attachment_link?: string
+  metadata?: any
+  parent_id?: string
+}
+
 export type DiscussionResponse = {
   discussion_id: string
   dao_id: string
