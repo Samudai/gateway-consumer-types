@@ -7,4 +7,5 @@ export enum PluginType {
   TWITTER = 'twitter',
   GITHUB = 'github',
   GITHUBAPP = 'githubapp',
+  TELEGRAM = 'telegram',
 }
