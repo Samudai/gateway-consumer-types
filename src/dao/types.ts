@@ -1,4 +1,5 @@
-import { IMember, ProjectResponse } from '../project/types'
+import { IMember } from '../project/interfaces'
+import { ProjectResponse } from '../project/types'
 import { DAOType, InviteStatus } from './enums'
 
 // interface Requirements {
@@ -81,20 +82,20 @@ export type DAOView = {
   poc_member?: IMember
   ismember?: string
   join_dao_link?: string
-  collaboration_pass : DaoCollaborationPass
+  collaboration_pass: DaoCollaborationPass
   collaborations: Collaborations[]
 }
 
 export type DaoCollaborationPass = {
-  collaboration_pass_id : string
-  claimed : boolean
+  collaboration_pass_id: string
+  claimed: boolean
 }
 
 export type Collaborations = {
-  collaboration_id : string
-  dao_id : string
-  name : string
-  profile_picture : string
+  collaboration_id: string
+  dao_id: string
+  name: string
+  profile_picture: string
 }
 
 export type DAOInvite = {
@@ -201,11 +202,11 @@ export type CollaborationResponse = {
 }
 
 export type CollaborationPass = {
-  collaboration_pass_id : string
-  dao_id : string
-  claimed : boolean
-  created_at? : string
-  updated_at? : string
+  collaboration_pass_id: string
+  dao_id: string
+  claimed: boolean
+  created_at?: string
+  updated_at?: string
 }
 
 export type Token = {
@@ -239,6 +240,7 @@ export type Blog = {
   metadata?: any
   created_at?: string
 }
+
 export type Review = {
   id: number
   dao_id: string
