@@ -12,7 +12,7 @@ export enum JobStatus {
   OPEN = 'open',
   CLOSED = 'closed',
   DRAFT = 'draft',
-  ARCHIVED = 'archived'
+  ARCHIVED = 'archived',
 }
 
 export enum ApplicantType {
@@ -41,11 +41,11 @@ export enum JobFormat {
 
 export enum JobPayoutLinkType {
   TASK = 'task',
-  BOUNTY = 'bounty'
+  BOUNTY = 'bounty',
 }
 
-export enum JobPayoutStatus { 
+export enum JobPayoutStatus {
   UNASSIGNED = 'unassigned',
   MPT = 'moved_to_project',
-  COMPLETED = 'completed'
+  COMPLETED = 'completed',
 }

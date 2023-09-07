@@ -1,4 +1,4 @@
 export enum LinkType {
-    DAO = "dao",
-    CONTRIBUTOR = "contributor"
+  DAO = 'dao',
+  CONTRIBUTOR = 'contributor',
 }

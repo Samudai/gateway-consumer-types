@@ -26,5 +26,5 @@ export enum MemberEventContext {
 
 export enum TagsType {
   DAO = 'dao',
-  CONTRIBUTOR = 'contributor'
+  CONTRIBUTOR = 'contributor',
 }
