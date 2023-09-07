@@ -68,7 +68,7 @@ export type MemberResponse = {
   pending_admin_reviews: number
   closed_task: number
 
-  isconnection?: boolean
+  isconnection?: string
   invite_code?: string
   invite_count: number
 
