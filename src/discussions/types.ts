@@ -101,7 +101,7 @@ export type DiscussionResponse = {
 
   tags?: string[]
   pinned?: boolean
-  visibility: string
+  visibility: Visibility
   last_comment_at?: string
 
   created_by: IMember
