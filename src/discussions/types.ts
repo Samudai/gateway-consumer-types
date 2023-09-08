@@ -1,4 +1,4 @@
-import { IMember } from '../project/types'
+import { IMember } from '../project/interfaces'
 import { DiscussionCategory, MessageType, Visibility} from './enums'
 
 
