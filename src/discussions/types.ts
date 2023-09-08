@@ -1,6 +1,7 @@
 import { IMember } from '../project/types'
 import { DiscussionCategory, MessageType, Visibility} from './enums'
 
+
 export type Discussion = {
   discussion_id?: string
   dao_id: string
@@ -25,12 +26,12 @@ export type Discussion = {
 }
 
 export type Participant = {
-  id: number;
-  discussion_id: string;
-  member_id: string;
+  id: number
+  discussion_id: string
+  member_id: string
 
-  created_at?: string;
-};
+  created_at?: string
+}
 
 export type Message = {
   message_id: string

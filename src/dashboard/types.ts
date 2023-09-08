@@ -13,9 +13,9 @@ export type Dashboard = {
 }
 
 export type DashboardName = {
-  dashboard_name: string;
-  dashboard_id: string;
-};
+  dashboard_name: string
+  dashboard_id: string
+}
 
 export type DashboardWidget = {
   dashboard_widget_id: number

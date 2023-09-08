@@ -3,7 +3,7 @@ import {
   DAOEventType,
   MemberEventContext,
   MemberEventType,
-  TagsType
+  TagsType,
 } from './enums'
 
 export type DiscoverDAOResponse = {
@@ -35,12 +35,12 @@ export type DiscoverMemberResponse = {
 }
 
 export type UniversalSearchResponse = {
-  id: string;
-  name: string;
-  profile_picture: string;
-  username?: string;
-  type: string;
-};
+  id: string
+  name: string
+  profile_picture: string
+  username?: string
+  type: string
+}
 
 export type DAOEvent = {
   dao_id: string
@@ -55,23 +55,23 @@ export type MemberEvent = {
   event_context: MemberEventContext
 }
 
-export type NewView = { 
-    type : TagsType;
-    link_id : string;
+export type NewView = {
+  type: TagsType
+  link_id: string
 }
 
 export type MostActiveResponse = {
-    _id : string;
-    type : TagsType;
-    link_id : string;
-    count : number;
-    timestamp_property : string;
+  _id: string
+  type: TagsType
+  link_id: string
+  count: number
+  timestamp_property: string
 }
 
 export type MostViewedResponse = {
-    _id : string;
-    type : TagsType;
-    link_id : string;
-    views : number;
-    date : string;
+  _id: string
+  type: TagsType
+  link_id: string
+  views: number
+  date: string
 }

@@ -21,6 +21,9 @@ export enum TaskStatus {
   DONE = 'done',
   IN_REVIEW = 'in-review',
   BACKLOG = 'backlog',
+  NOT_STARTED = 'Not Started',
+  IN_WORK = 'In Work',
+  REVIEW = 'Review',
 }
 
 export enum CommentType {
@@ -39,5 +42,10 @@ export enum ResponseType {
 
 export enum TaskCreatedSource {
   PROJECT = 'project',
-  JOB = 'job'
+  JOB = 'job',
+}
+
+export enum ProjectVisibilty {
+  PUBLIC = 'public',
+  MEMBER = 'member',
 }

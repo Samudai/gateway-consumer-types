@@ -20,7 +20,7 @@ export enum NotificationFor {
   MEMBER = 0,
   ADMIN = 1,
   CAPTAIN = 2,
-  ADMIN_MEMBER = 3
+  ADMIN_MEMBER = 3,
 }
 
 export enum NotificationScope {
@@ -35,7 +35,7 @@ export enum SocketEventsToService {
   'DISCONNECT' = 'disconnect',
 }
 
-export enum SocketEventsToServiceGeneral { 
+export enum SocketEventsToServiceGeneral {
   'DEAL_FORM_RESPONSE' = 'deal_form_response',
   'GENERAL_NOTIFICATION' = 'general_notification',
   'MEETING_CREATED' = 'meeting_created',
@@ -44,11 +44,11 @@ export enum SocketEventsToServiceGeneral {
 export enum SocketEventsToServiceChat {
   'CHAT_REQUESTED_NOTIFICATION' = 'chat_requested_notification',
   'CHAT_REQUEST_ACCEPT_NOTIFICATION' = 'chat_request_accepted_notification',
-  'MESSAGE_RECIEVED_NOTIFICATION' = 'message_recieved_notification'
+  'MESSAGE_RECIEVED_NOTIFICATION' = 'message_recieved_notification',
 }
 
 export enum SocketEventsToServiceDiscovery {
-  'PROFILE_VIEW_NOTIFICATION' = 'profile_view_notifications'
+  'PROFILE_VIEW_NOTIFICATION' = 'profile_view_notifications',
 }
 
 export enum SocketEventsToServiceForum {
@@ -64,7 +64,7 @@ export enum SocketEventsToServiceForum {
   'MOST_ACTIVE_PARTICIPANT' = 'most_active_participant',
   'MOST_ACTIVE_PARTICANT_TO_CREATOR' = 'most_active_participant_to_creator',
   'COLLECTED_COMMENTS_NOTIFICATION' = 'collected_comments_notification',
-  'DISCUSSION_CLOSED' = 'discussion_closed'
+  'DISCUSSION_CLOSED' = 'discussion_closed',
 }
 
 export enum SocketEventsToServiceJob {
@@ -73,7 +73,7 @@ export enum SocketEventsToServiceJob {
   'JOB_APPLICANT_ACCEPTED' = 'job_applicant_accepted',
   'BOUNTY_REWARDED' = 'bounty_rewarded',
   'JOB_APPLICANT_REJECTED' = 'job_applicant_rejected',
-  'BOUNTY_SUBMISSION_REJECTED' = 'bounty_submission_rejected'
+  'BOUNTY_SUBMISSION_REJECTED' = 'bounty_submission_rejected',
 }
 
 export enum SocketEventsToServicePayment {
@@ -88,7 +88,7 @@ export enum SocketEventsToServicePayment {
   'FIRST_SIGNING_PAYMENT' = 'first_signing_payment',
   'SIGNING_PAYMENT' = 'signing_payment',
   'EXECUTE_PAYMENT' = 'execute_payment',
-  'INITIATE_PAYMENT' = 'initiate_payment'
+  'INITIATE_PAYMENT' = 'initiate_payment',
 }
 
 export enum SocketEventsToServiceProject {
@@ -117,12 +117,12 @@ export enum SocketEventsToServiceContributorProfile {
   'SOCIAL_CONNECTION_REQUEST' = 'social_connection_request',
   'CONNECTION_ACCEPTED_REQUEST' = 'connection_accepted_request',
   'CONTRIBUTOR_COMPLETE_PROFILE' = 'contributor_complete_profile',
-  'CONTRIBUTOR_COMPlETE_PROFILE_TO_APPLY_JOB' = 'contributor_complete_profile_to_apply_job'
+  'CONTRIBUTOR_COMPlETE_PROFILE_TO_APPLY_JOB' = 'contributor_complete_profile_to_apply_job',
 }
 
 export enum SocketEventsToServiceDaoProfile {
   'COLLABORATION_REQUEST' = 'collaboration_request',
-  'COMPLETE_PROFILE' = 'complete_profile'
+  'COMPLETE_PROFILE' = 'complete_profile',
 }
 
 export enum SocketEventsFromService {
@@ -130,5 +130,5 @@ export enum SocketEventsFromService {
   'HEADS_UP' = 'heads_up',
   'ACT_FAST' = 'act_fast',
   'TRACTION' = 'traction',
-  'KUDOS' = 'kudos'
+  'KUDOS' = 'kudos',
 }
