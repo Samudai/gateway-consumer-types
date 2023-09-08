@@ -11,3 +11,8 @@ export enum MessageType {
   GIF = 'gif',
   IMAGE = 'image',
 }
+
+export enum Visibility { 
+  PUBLIC = 'public',
+  PRIVATE = 'private',
+}
