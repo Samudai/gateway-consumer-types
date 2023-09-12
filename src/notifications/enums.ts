@@ -65,6 +65,8 @@ export enum SocketEventsToServiceForum {
   'MOST_ACTIVE_PARTICANT_TO_CREATOR' = 'most_active_participant_to_creator',
   'COLLECTED_COMMENTS_NOTIFICATION' = 'collected_comments_notification',
   'DISCUSSION_CLOSED' = 'discussion_closed',
+  'REPLY_TO_COMMENT' = 'reply_to_comment',
+  'TAGGED_IN_COMMENT' = 'tagged_in_comment'
 }
 
 export enum SocketEventsToServiceJob {
