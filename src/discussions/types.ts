@@ -1,6 +1,5 @@
 import { IMember } from '../project/interfaces'
-import { DiscussionCategory, MessageType, Visibility} from './enums'
-
+import { DiscussionCategory, MessageType, Visibility } from './enums'
 
 export type Discussion = {
   discussion_id?: string
@@ -19,7 +18,7 @@ export type Discussion = {
   proposal_id?: string
   tags?: string[]
   pinned?: boolean
-  visibility: Visibility
+  visibility?: Visibility
   last_comment_at?: string
   created_at?: string
   updated_at?: string
