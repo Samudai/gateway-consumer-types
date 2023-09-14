@@ -43,7 +43,8 @@ export type Message = {
   metadata?: any
   edited?: boolean
   parent_id?: string
-  all_tagged?: boolean;
+  all_tagged?: boolean
+  tagged?: string[]
 
   created_at?: string
   updated_at?: string
@@ -62,7 +63,8 @@ export type MessageResponse = {
   sender?: IMember
   edited?: boolean
   parent_message?: ParentMessage
-  all_tagged?: boolean;
+  all_tagged?: boolean
+  tagged?: string[]
 
   created_at?: string
   updated_at?: string
