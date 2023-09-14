@@ -66,7 +66,8 @@ export enum SocketEventsToServiceForum {
   'COLLECTED_COMMENTS_NOTIFICATION' = 'collected_comments_notification',
   'DISCUSSION_CLOSED' = 'discussion_closed',
   'REPLY_TO_COMMENT' = 'reply_to_comment',
-  'TAGGED_IN_COMMENT' = 'tagged_in_comment'
+  'TAGGED_IN_COMMENT' = 'tagged_in_comment',
+  'ALL_TAGGED_IN_COMMENT' = 'all_tagged_in_comment'
 }
 
 export enum SocketEventsToServiceJob {
