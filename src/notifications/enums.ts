@@ -46,6 +46,8 @@ export enum SocketEventsToServiceChat {
   'CHAT_REQUEST_ACCEPT_NOTIFICATION' = 'chat_request_accepted_notification',
   'MESSAGE_RECIEVED_NOTIFICATION' = 'message_recieved_notification',
   'GROUP_MESSAGE_RECIEVED_NOTIFICATION' = 'group_message_received_notification',
+  'GROUP_JOINING_REQUEST_NOTIFICATION' = 'group_joining_request_notification',
+  'GROUP_JOINING_ACCEPTED_NOTIFICATION' = 'group_joining_accepted_notification'
 }
 
 export enum SocketEventsToServiceDiscovery {
