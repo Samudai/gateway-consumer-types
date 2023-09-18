@@ -9,4 +9,5 @@ export enum QuestionType {
   SELECT = 'select',
   MULTISELECT = 'multi_select',
   ATTACHMENT = 'attachment',
+  ATTACHMENT_WITH_VIDEO = "attachment_with_video",
 }
