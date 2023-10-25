@@ -47,7 +47,7 @@ export enum SocketEventsToServiceChat {
   'MESSAGE_RECIEVED_NOTIFICATION' = 'message_recieved_notification',
   'GROUP_MESSAGE_RECIEVED_NOTIFICATION' = 'group_message_received_notification',
   'GROUP_JOINING_REQUEST_NOTIFICATION' = 'group_joining_request_notification',
-  'GROUP_JOINING_ACCEPTED_NOTIFICATION' = 'group_joining_accepted_notification'
+  'GROUP_JOINING_ACCEPTED_NOTIFICATION' = 'group_joining_accepted_notification',
 }
 
 export enum SocketEventsToServiceDiscovery {
@@ -70,7 +70,7 @@ export enum SocketEventsToServiceForum {
   'DISCUSSION_CLOSED' = 'discussion_closed',
   'REPLY_TO_COMMENT' = 'reply_to_comment',
   'TAGGED_IN_COMMENT' = 'tagged_in_comment',
-  'ALL_TAGGED_IN_COMMENT' = 'all_tagged_in_comment'
+  'ALL_TAGGED_IN_COMMENT' = 'all_tagged_in_comment',
 }
 
 export enum SocketEventsToServiceJob {
@@ -124,6 +124,7 @@ export enum SocketEventsToServiceContributorProfile {
   'CONNECTION_ACCEPTED_REQUEST' = 'connection_accepted_request',
   'CONTRIBUTOR_COMPLETE_PROFILE' = 'contributor_complete_profile',
   'CONTRIBUTOR_COMPlETE_PROFILE_TO_APPLY_JOB' = 'contributor_complete_profile_to_apply_job',
+  'CONTRIBUTOR_SUBDOMAIN_CLAIMED_SUCCESS' = 'contributor_subdomain_claimed_success',
 }
 
 export enum SocketEventsToServiceDaoProfile {
