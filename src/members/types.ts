@@ -79,6 +79,7 @@ export type MemberResponse = {
 export type FeaturedProjects = {
   url: string
   about?: string
+  metadata?: any
 }
 
 export type MemberWorkProgress = {
@@ -382,12 +383,12 @@ export type MemberReward = {
 }
 
 export type Subdomain = {
-  subdomain_id?: string;
-  member_id: string;
-  subdomain: string;
-  redirection_link?: string;
-  access?: string;
-  wallet_address?: string;
-  created_at?: string;
-  updated_at?: string | null;
+  subdomain_id?: string
+  member_id: string
+  subdomain: string
+  redirection_link?: string
+  access?: string
+  wallet_address?: string
+  created_at?: string
+  updated_at?: string | null
 }
