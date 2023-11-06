@@ -57,12 +57,12 @@ export enum DAOItems {
   SETUP_DAO_PROFILE = 'setup_dao_profile',
   COMPLETE_INTEGRATIONS = 'complete_integrations',
   CREATE_A_PROJECT = 'create_a_project',
-  // COMPLETE_PROFILE = 'complete_profile',
-  // EXPLORE_DASHBOARD = 'explore_dashboard',
-  // INVITE_MEMBERS = 'invite_members',
-  // START_NEW_PROJECT = 'start_new_project',
-  // POST_A_JOB = 'post_a_job',
-  // COLLABORATION_PASS_CLAIM = 'collaboration_pass_claim',
+  COMPLETE_PROFILE = 'complete_profile',
+  EXPLORE_DASHBOARD = 'explore_dashboard',
+  INVITE_MEMBERS = 'invite_members',
+  START_NEW_PROJECT = 'start_new_project',
+  POST_A_JOB = 'post_a_job',
+  COLLABORATION_PASS_CLAIM = 'collaboration_pass_claim',
 }
 
 export enum ContributorItems {
@@ -72,9 +72,9 @@ export enum ContributorItems {
   ADD_HOURLY_RATE = 'add_hourly_rate',
   ACCEPT_PENDING_REQUESTS = 'accept_pending_requests',
   CONNECT_TELEGRAM = 'connect_telegram',
-  // COMPLETE_PROFILE = 'complete_profile',
-  // INVITE_MEMBERS = 'invite_members',
-  // CONNECT_WITH_CONTRIBUTORS = 'connect_with_contributors',
-  // APPLY_FOR_JOB = 'apply_for_job',
-  // NFT_CLAIM = 'nft_claim',
+  COMPLETE_PROFILE = 'complete_profile',
+  INVITE_MEMBERS = 'invite_members',
+  CONNECT_WITH_CONTRIBUTORS = 'connect_with_contributors',
+  APPLY_FOR_JOB = 'apply_for_job',
+  NFT_CLAIM = 'nft_claim',
 }
