@@ -38,7 +38,7 @@ export enum OnboardingScreens {
 
 export const DAOOnboardingFlow = [
   {
-    step: 6,
+    step: 5,
     name: 'discord_bot_added',
   },
 ]
