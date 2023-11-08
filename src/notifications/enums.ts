@@ -130,6 +130,7 @@ export enum SocketEventsToServiceContributorProfile {
 export enum SocketEventsToServiceDaoProfile {
   'COLLABORATION_REQUEST' = 'collaboration_request',
   'COMPLETE_PROFILE' = 'complete_profile',
+  'DAO_SUBDOMAIN_CLAIMED_SUCCESS' = 'dao_subdomain_claimed_success',
 }
 
 export enum SocketEventsFromService {
