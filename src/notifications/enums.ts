@@ -24,9 +24,10 @@ export enum NotificationFor {
 }
 
 export enum NotificationScope {
-  ALL = 0,
-  MENTIONS = 1,
-  CONNECTION_REQUESTS = 2,
+  HEADS_UP = 0,
+  ACT_FAST = 1,
+  TRACTION = 2,
+  KUDOS = 3,
 }
 
 export enum NewNotificationType {
@@ -36,10 +37,9 @@ export enum NewNotificationType {
 }
 
 export enum NewNotificationScope {
-  HEADS_UP = 0,
-  ACT_FAST = 1,
-  TRACTION = 2,
-  KUDOS = 3,
+  ALL = 0,
+  MENTIONS = 1,
+  CONNECTION_REQUESTS = 2,
 }
 
 export enum SocketEventsToService {
