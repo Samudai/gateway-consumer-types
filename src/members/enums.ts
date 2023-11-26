@@ -3,6 +3,7 @@ export enum InviteStatus {
   PENDING = 'pending',
   ACCEPTED = 'accepted',
   DECLINED = 'declined',
+  REJECTED = 'rejected',
 }
 
 export enum ClanRole {
