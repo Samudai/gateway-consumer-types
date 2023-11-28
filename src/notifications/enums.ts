@@ -152,3 +152,10 @@ export enum SocketEventsFromService {
   'TRACTION' = 'traction',
   'KUDOS' = 'kudos',
 }
+
+export enum NewSocketEventsFromService {
+  'MEMBER_CONNECTED' = 'memberConnected',
+  'ALL' = 'all',
+  'MENTIONS' = 'mentions',
+  'CONNECTION_REQUESTS' = 'connection_requests',
+}
