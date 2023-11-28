@@ -22,7 +22,7 @@ export type WebNotification = {
   notificationStatus: NotificationStatus
   notificationContent: NotificationContent
   timestamp: number
-  scope: NotificationScope | NotificationScope
+  scope: NotificationScope | NewNotificationScope
   read?: boolean
 }
 
