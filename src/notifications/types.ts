@@ -1,5 +1,6 @@
 import { IMember } from '../project/interfaces'
 import {
+  NewNotificationScope,
   NewNotificationType,
   NotificationCreatedby,
   NotificationFor,
