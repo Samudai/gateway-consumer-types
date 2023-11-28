@@ -1,5 +1,6 @@
 import { IMember } from '../project/interfaces'
 import {
+  NewNotificationType,
   NotificationCreatedby,
   NotificationFor,
   NotificationScope,
@@ -21,11 +22,12 @@ export type WebNotification = {
   notificationStatus: NotificationStatus
   notificationContent: NotificationContent
   timestamp: number
-  scope: NotificationScope
+  scope: NotificationScope | NotificationScope
+  read?: boolean
 }
 
 export type NotificationContent = {
-  type: NotificationType
+  type: NotificationType | NewNotificationType
   tags: string[]
   popup: boolean
   notificationHeader: string
