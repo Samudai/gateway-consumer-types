@@ -9,10 +9,6 @@ export enum DAOType {
   GENERAL = 'general',
 }
 
-export enum DAOOnboardingFlowStep {
-  'BOT_ADDED' = 'BOT_ADDED',
-}
-
 export enum OnboardingСapabilities {
   INVESTMENT = 'Investment',
   PROJECT_MANAGMENT = 'Internal Project Management',
@@ -35,10 +31,3 @@ export enum OnboardingScreens {
   CONNECT_EXTRA_APPS = 'Connect Apps',
   COMPLETED = 'Completed',
 }
-
-export const DAOOnboardingFlow = [
-  {
-    step: 5,
-    name: 'discord_bot_added',
-  },
-]
