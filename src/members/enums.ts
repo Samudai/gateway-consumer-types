@@ -21,8 +21,8 @@ export enum MemberOnboardingFlowStep {
 export enum MemberOnboardingFlowStepNumber {
   'LOGIN' = 1,
   'TYPE_OF_MEMBER' = 2,
-  'CONNECT_DISCORD' = 3,
-  'ADD_NAME' = 4,
+  'SETUP_PROFILE' = 3,
+  'PROFILE_DETAILS' = 4,
 }
 
 export enum ProfilePicture {
