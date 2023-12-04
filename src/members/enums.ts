@@ -14,15 +14,8 @@ export enum ClanRole {
 export enum MemberOnboardingFlowStep {
   'LOGIN' = 'LOGIN',
   'TYPE_OF_MEMBER' = 'TYPE_OF_MEMBER',
-  'CONNECT_DISCORD' = 'CONNECT_DISCORD',
-  'ADD_NAME' = 'ADD_NAME',
-}
-
-export enum MemberOnboardingFlowStepNumber {
-  'LOGIN' = 1,
-  'TYPE_OF_MEMBER' = 2,
-  'CONNECT_DISCORD' = 3,
-  'ADD_NAME' = 4,
+  'SETUP_PROFILE' = 'SETUP_PROFILE',
+  'PROFILE_DETAILS' = 'PROFILE_DETAILS',
 }
 
 export enum ProfilePicture {
@@ -41,9 +34,12 @@ export const MemberOnboardingFlow = [
   },
   {
     step: 3,
-    name: 'connect_discord',
+    name: 'setup_profile',
   },
-  { step: 4, name: 'add_name' },
+  {
+    step: 4,
+    name: 'profile_details',
+  },
 ]
 
 export enum FetchMemberType {
