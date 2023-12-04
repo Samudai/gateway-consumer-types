@@ -18,6 +18,13 @@ export enum MemberOnboardingFlowStep {
   'PROFILE_DETAILS' = 'PROFILE_DETAILS',
 }
 
+export enum MemberOnboardingFlowStepNumber {
+  'LOGIN' = 1,
+  'TYPE_OF_MEMBER' = 2,
+  'SETUP_PROFILE' = 3,
+  'PROFILE_DETAILS' = 4,
+}
+
 export enum ProfilePicture {
   'Photo',
   'NFT',
