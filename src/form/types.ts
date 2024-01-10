@@ -3,6 +3,8 @@ import { FormType, QuestionType } from './enums'
 export type Form = {
   form_id: string
   dao_id: string
+  name: string
+  description: string
   type: FormType
   questions: Question[]
   created_by: string
