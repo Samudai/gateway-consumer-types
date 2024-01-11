@@ -4,7 +4,6 @@ export type Form = {
   form_id: string
   dao_id: string
   name: string
-  description: string
   type: FormType
   questions: Question[]
   created_by: string
@@ -18,6 +17,8 @@ export type Question = {
   question: string
   type: QuestionType
   select: string[]
+  required: boolean
+  description?: string
 }
 
 export type FormResponse = {
