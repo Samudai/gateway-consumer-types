@@ -223,6 +223,7 @@ export type Submission = {
 
   created_at?: string
   updated_at?: string
+  updated_by: string
 }
 
 export type BountyFilter = {
