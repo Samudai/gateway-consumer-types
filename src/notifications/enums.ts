@@ -107,6 +107,8 @@ export enum SocketEventsToServicePayment {
   'SIGNING_PAYMENT' = 'signing_payment',
   'EXECUTE_PAYMENT' = 'execute_payment',
   'INITIATE_PAYMENT' = 'initiate_payment',
+  'REJECT_TXN_NUDGE' = 'reject_txn_nudge',
+  'ACCEPT_TXN_NUDGE' = 'accept_txn_nudge',
 }
 
 export enum SocketEventsToServiceProject {
