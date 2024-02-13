@@ -324,3 +324,27 @@ export type SubdomainInfo = {
   provider_address: string
   approved: boolean
 }
+
+export type Subscription = {
+  subscription_status: string
+  quantity: number
+  current_plan: CurrentPlan
+  interval: Interval
+}
+
+export type CurrentPlan = {
+  price_tier: string
+  users: number
+  projects: number
+  forms: number
+  forum_members: number
+  forum_history: string
+  support: string
+  chats_jobs_bounties: string
+}
+
+export type Interval = {
+  currency: string
+  interval: string
+  interval_count: number
+}
