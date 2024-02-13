@@ -43,3 +43,11 @@ export type Feedback = {
   type_of_member: string
   feedback: string
 }
+
+export type CancellationFeedback = {
+  member_id: string
+  dao_id: string
+  feedback: string
+  subscriptionQty: number
+  alternative?: string
+}
