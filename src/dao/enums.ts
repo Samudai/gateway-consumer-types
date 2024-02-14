@@ -31,3 +31,15 @@ export enum OnboardingScreens {
   CONNECT_EXTRA_APPS = 'Connect Apps',
   COMPLETED = 'Completed',
 }
+
+export enum PriceTier {
+  FREE = 'free',
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  ENTERPRISE = 'enterprise',
+}
+
+export enum Interval {
+  MONTHLY = 'monthly',
+  YEARLY = 'yearly',
+}
