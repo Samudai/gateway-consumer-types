@@ -74,7 +74,7 @@ export type DAOView = {
   roles: string[]
   socials: DAOSocial[] //Socials
   tokens: string[] //Tokens
-  Subscription: Subscription
+  subscription: Subscription
 
   created_at?: string
   updated_at?: string
