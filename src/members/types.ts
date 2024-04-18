@@ -291,6 +291,20 @@ export type GuildForMember = {
   guild_data: GuildData[]
 }
 
+export declare type GuildForMemberPoints = {
+  id: string
+  bot: boolean
+  username: string
+  discriminator: string
+  avatar: string | null
+  guild_id: string
+  joined_at: string
+  nickname: string | null
+  roles: string[]
+  points_num: number
+  guild_data: GuildData[]
+}
+
 export type GuildData = {
   id: string
   name: string
@@ -341,6 +355,13 @@ export type MemberGuilds = {
 export type GuildInfo = {
   guild_id: string
   discord_roles: string[]
+  joined_at: string
+}
+
+export declare type GuildPointsInfo = {
+  guild_id: string
+  discord_roles: string[]
+  points_num: number
   joined_at: string
 }
 
