@@ -16,6 +16,9 @@ export enum ProjectAccessType {
   MANAGE_DAO = 'manage_dao',
 }
 
+// Several access types intentionally share the same numeric level (e.g. all
+// `manage_*` permissions below sit at tier 3), so duplicate values are expected.
+/* eslint-disable @typescript-eslint/no-duplicate-enum-values */
 export enum AccessLevels {
   hidden = 0,
   view = 1,
@@ -26,3 +29,4 @@ export enum AccessLevels {
   manage_project = 3,
   manage_dao = 4,
 }
+/* eslint-enable @typescript-eslint/no-duplicate-enum-values */

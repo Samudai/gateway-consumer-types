@@ -1,16 +1,30 @@
 # gateway-consumer-types
 
+## Installation
+
+This package is published to **GitHub Packages** under the `@samudai` scope. To install it you must
+point the `@samudai` scope at the GitHub Packages registry and authenticate with a GitHub token that
+has the `read:packages` scope.
+
+1. Add the following to your project's `.npmrc` (replace `YOUR_GITHUB_TOKEN`):
+
+    ```ini
+    @samudai:registry=https://npm.pkg.github.com
+    //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+    ```
+
+2. Install the package:
+
+    `npm i @samudai/gateway-consumer-types`
+
 ## Usage
 
-1. Install Package
-    `npm i @samudai_xyz/gateway-consumer-types`
+Import types or enums:
 
-2. Import types or enums
-
-    ```ts
-    import { ServiceAMS, Member, Project } from '@samudai_xyz/gateway-consumer-types';
-    import { ProjectEnums, MembersEnums } from '@samudai_xyz/gateway-consumer-types';
-    ```
+```ts
+import { ServiceAMS, Member, Project } from '@samudai/gateway-consumer-types';
+import { ProjectEnums, MembersEnums } from '@samudai/gateway-consumer-types';
+```
 
 ## Types and Enums Available
 
